@@ -1,0 +1,18 @@
+.functionality {
+    width: 40%;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+.column:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.imgTitle {
+    text-align: center;
+}
+.imgText {
+    text-align: justify;
+}
