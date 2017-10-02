@@ -11,9 +11,33 @@ https://color.adobe.com/pl/Kolorystyka-strony-color-theme-10064343/
 
  */
 
+/*dopasowanie strony do okna przeglądarki + reset narzuconych marginesów */
+
 html, body {
     height: 100%;
     margin: 0px;
+}
+
+/*reset ustawień domyślnych dla wszystkich elementów HTML */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+}
+
+/* FZ7NI-5 ZAJAWKA jako header - START */
+
+@font-face {
+    font-family: 'Track';
+    src: url('../fonts/Track.ttf');
+    font-family: 'Track Italic';
+    src: url('../fonts/Track Italic.ttf');
+
 }
 
 header {
@@ -23,9 +47,37 @@ header {
     display: block;
     background: url(../img/zajawka_tlo.jpg) no-repeat center;
     background-size: cover;
-
-
+    font-family: Track;
+    position: relative;
 }
+
+.slogan {
+    display: inline-block;
+    width: 100%;
+    height: 17em;
+    margin: 14em auto;
+    text-align: center;
+    background-color: rgba(86,46,37,0.9);
+    position: absolute;
+    color: rgb(240,234,210);
+    padding: 1em;
+}
+
+.slogan h1 {
+    font-size: 5em;
+}
+
+.slogan h2 {
+    font-size: 3em;
+}
+
+.slogan li {
+    margin-left: 15em;
+    text-align: left;
+}
+
+
+/* FZ7NI-5 ZAJAWKA jako header - KONIEC */
 
 .functionality {
     width: 40%;
