@@ -62,7 +62,7 @@ header {
     background-color: rgba(86,46,37,0.9);
     position: absolute;
     color: rgb(240,234,210);
-    padding: 1em;
+    padding: 1em 0;
 }
 
 .slogan h1 {
