@@ -37,6 +37,8 @@ html, body {
     src: url('../fonts/Track.ttf');
     font-family: 'Track Italic';
     src: url('../fonts/Track Italic.ttf');
+    font-family: 'Slabo27px-Regular';
+    src: url('../fonts/Slabo27px-Regular.ttf')
 
 }
 
@@ -47,7 +49,7 @@ header {
     display: block;
     background: url(../img/zajawka_tlo.jpg) no-repeat center;
     background-size: cover;
-    font-family: Track;
+    font-family: Slabo27px-Regular;
     position: relative;
 }
 
@@ -64,11 +66,11 @@ header {
 }
 
 .slogan h1 {
-    font-size: 5em;
+    font-size: 6em;
 }
 
 .slogan h2 {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .slogan li {
