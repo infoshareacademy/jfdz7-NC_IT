@@ -5,6 +5,10 @@
     float: left;
     width: 50%;
 }
+.row {
+    margin: auto;
+    width: 60%;
+}
 .column:after {
     content: '';
     display: table;
@@ -15,4 +19,10 @@
 }
 .imgText {
     text-align: justify;
+}
+.table {
+    margin: auto;
+}
+.img {
+
 }
