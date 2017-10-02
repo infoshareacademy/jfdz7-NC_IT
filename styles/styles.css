@@ -11,6 +11,22 @@ https://color.adobe.com/pl/Kolorystyka-strony-color-theme-10064343/
 
  */
 
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+
+header {
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/zajawka_tlo.jpg) no-repeat center;
+    background-size: cover;
+
+
+}
+
 .functionality {
     width: 40%;
 }
