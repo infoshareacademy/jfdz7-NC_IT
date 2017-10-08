@@ -38,7 +38,9 @@ html, body {
     font-family: 'Track Italic';
     src: url('../fonts/Track Italic.ttf');
     font-family: 'Slabo27px-Regular';
-    src: url('../fonts/Slabo27px-Regular.ttf')
+    src: url('../fonts/Slabo27px-Regular.ttf');
+    font-family: 'RiseofKingdom';
+    src: url('../fonts/RiseofKingdom.ttf');
 
 }
 
@@ -49,33 +51,51 @@ header {
     display: block;
     background: url(../img/zajawka_tlo.jpg) no-repeat center;
     background-size: cover;
-    font-family: Slabo27px-Regular;
+    font-family: "Slabo27px-Regular";
     position: relative;
 }
 
 .slogan {
     display: inline-block;
     width: 100%;
-    height: 17em;
+    max-height: inherit;
     margin: 14em auto;
     text-align: center;
     background-color: rgba(86,46,37,0.9);
     position: absolute;
     color: rgb(240,234,210);
-    padding: 1em 0;
+    padding: 0.3em 0;
 }
 
 .slogan h1 {
-    font-size: 6em;
+    font-size: 4em;
 }
 
-.slogan h2 {
-    font-size: 4em;
+#logo_zaj {
+    margin: 0 auto;
+}
+
+#logo_zaj img {
+    width: 25%;
+    height: 8%;
+}
+
+.slogan ul {
+    list-style: none;
 }
 
 .slogan li {
     margin-left: 15em;
     text-align: left;
+    font-size: 1.4em;
+}
+
+#zajawka_li2 {
+    text-indent: 2em;
+}
+
+#zajawka_li3 {
+    text-indent: 4em;
 }
 
 
