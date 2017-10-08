@@ -52,7 +52,7 @@ header {
     background: url(../img/zajawka_tlo.jpg) no-repeat center;
     background-size: cover;
     font-family: "Slabo27px-Regular";
-    position: relative;
+    position: static;
 }
 
 .slogan {
@@ -96,6 +96,23 @@ header {
 
 #zajawka_li3 {
     text-indent: 4em;
+}
+
+#link_formularz {
+    width: 15em;
+    height: 4.5em;
+    display: block;
+    position: absolute;
+    margin: 45em 43%;
+    background-color: rgba(86,46,37,0.9);
+    border-radius: 1em;
+
+}
+
+#link_formularz img {
+    width: 90%;
+    height: 90%;
+    margin: 0.2em 0.8em;
 }
 
 
