@@ -287,3 +287,32 @@ header {
     border: 1px solid #000000;
 
 }
+
+/*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
+.fa {
+    font-size: 80px;
+}
+
+.features {
+    display: inline-block;
+    padding: 30px;
+    margin-top: 130px;
+    margin-bottom: 180px;
+}
+
+.features-pics {
+    background-color: #E0BDAA;
+}
+
+p {
+    font-family: "Avenir Next";
+    text-transform: uppercase;
+    padding: 7px;
+}
+
+.features:hover {
+    color: #893E16;
+    border: solid 0.5px;
+    border-radius: 5%;
+}
+/*FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI*/
