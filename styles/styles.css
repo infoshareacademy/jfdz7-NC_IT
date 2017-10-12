@@ -16,6 +16,7 @@ https://color.adobe.com/pl/Kolorystyka-strony-color-theme-10064343/
 html, body {
     height: 100%;
     margin: 0px;
+    padding: 0px;
 }
 
 /*reset ustawień domyślnych dla wszystkich elementów HTML */
@@ -47,37 +48,42 @@ html, body {
 header {
     margin: 0px auto;
     width: 100%;
-    height: 100%;
+    height: inherit;
     display: block;
     background: url(../img/zajawka_tlo.jpg) no-repeat center;
     background-size: cover;
     font-family: "Slabo27px-Regular";
-    position: static;
+    position: relative;
+
+}
+
+.container-fluid {
+    padding: 0px;
 }
 
 .slogan {
     display: inline-block;
     width: 100%;
     max-height: inherit;
-    margin: 14em auto;
+    margin: 200px auto;
     text-align: center;
     background-color: rgba(86,46,37,0.9);
-    position: absolute;
     color: rgb(240,234,210);
-    padding: 0.3em 0;
+    padding: 15px 0;
+    position: absolute;
 }
 
 .slogan h1 {
-    font-size: 4em;
+    font-size: 70px;
 }
 
 #logo_zaj {
-    margin: 0 auto;
+    margin: 0px auto;
 }
 
 #logo_zaj img {
-    width: 25%;
-    height: 8%;
+    width: 30%;
+    height: 15%;
 }
 
 .slogan ul {
@@ -85,27 +91,30 @@ header {
 }
 
 .slogan li {
-    margin-left: 15em;
+    margin-left: 10%;
     text-align: left;
-    font-size: 1.4em;
+    font-size: 25px;
 }
 
 #zajawka_li2 {
-    text-indent: 2em;
+    text-indent: 40px;
 }
 
 #zajawka_li3 {
-    text-indent: 4em;
+    text-indent: 80px;
 }
 
 #link_formularz {
-    width: 15em;
-    height: 4.5em;
-    display: block;
-    position: absolute;
-    margin: 45em 43%;
+    width: 250px;
+    height: 70px;
+    bottom: 0px;
     background-color: rgba(86,46,37,0.9);
     border-radius: 1em;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 
 }
 
@@ -115,6 +124,134 @@ header {
     margin: 0.2em 0.8em;
 }
 
+/* RESPONSYWNOŚĆ ZAJAWKI @MEDIA */
+
+@media all and (max-width: 1300px) {
+    .slogan h1{
+        font-size: 50px;
+    }
+
+    #logo_zaj img {
+        width: 30%;
+        height: 15%;
+    }
+
+    .slogan li {
+        margin-left: 5%;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    #zajawka_li2 {
+        text-indent: 20px;
+    }
+
+    #zajawka_li3 {
+        text-indent: 40px;
+    }
+
+}
+
+@media all and (min-width: 960px) and (max-width: 1200px) {
+    .slogan h1{
+        font-size: 45px;
+    }
+
+    #logo_zaj img {
+        width: 30%;
+        height: 15%;
+    }
+
+    .slogan li {
+        margin-left: 10%;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    #zajawka_li2 {
+        text-indent: 10px;
+    }
+
+    #zajawka_li3 {
+        text-indent: 20px;
+    }
+
+}
+
+@media all and (min-width: 768px) and (max-width: 959px) {
+    .slogan h1{
+        font-size: 40px;
+    }
+
+    #logo_zaj img {
+        width: 30%;
+        height: 15%;
+    }
+
+    .slogan li {
+        margin-left: 5%;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    #zajawka_li2 {
+        text-indent: 8px;
+    }
+
+    #zajawka_li3 {
+        text-indent: 18px;
+    }
+}
+
+@media all and (min-width: 557px) and (max-width: 767px){
+    .slogan h1{
+        font-size: 30px;
+    }
+
+    #logo_zaj img {
+        width: 35%;
+        height: 20%;
+    }
+
+    .slogan li {
+        margin-left: 4%;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    #zajawka_li2 {
+        text-indent: 2px;
+    }
+
+    #zajawka_li3 {
+        text-indent: 4px;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 556px) {
+    .slogan h1{
+        font-size: 25px;
+    }
+
+    #logo_zaj img {
+        width: 35%;
+        height: 20%;
+    }
+
+    .slogan li {
+        margin-left: 3%;
+        text-align: left;
+        font-size: 8px;
+    }
+
+    #zajawka_li2 {
+        text-indent: 2px;
+    }
+
+    #zajawka_li3 {
+        text-indent: 4px;
+    }
+}
 
 /* FZ7NI-5 ZAJAWKA jako header - KONIEC */
 
