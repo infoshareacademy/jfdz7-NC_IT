@@ -258,9 +258,14 @@ header {
 .functionality {
     width: 40%;
 }
+
 .column {
     float: left;
     width: 50%;
+}
+.row {
+    margin: auto;
+    width: 60%;
 }
 .column:after {
     content: '';
@@ -272,4 +277,13 @@ header {
 }
 .imgText {
     text-align: justify;
+}
+.table {
+    margin: auto;
+}
+.img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+
 }
