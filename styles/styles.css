@@ -29,6 +29,7 @@ html, body {
     vertical-align: baseline;
     text-decoration: none;
     outline: 0;
+    box-sizing: border-box;
 }
 
 /* FZ7NI-5 ZAJAWKA jako header - START */
@@ -258,13 +259,14 @@ header {
 .functionality {
     width: 40%;
 }
-
 .column {
     float: left;
-    width: 50%;
+    width: 30%;
 }
 .row {
-    margin: auto;
+    margin-top: 10px;
+    margin-left: 35%;
+    margin-right: 35%;
     width: 60%;
 }
 .column:after {
@@ -282,8 +284,7 @@ header {
     margin: auto;
 }
 .img {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border: 1px solid #000000;
-
 }
