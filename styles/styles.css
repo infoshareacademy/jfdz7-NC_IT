@@ -251,6 +251,38 @@ header {
     #zajawka_li3 {
         text-indent: 4px;
     }
+
+}
+
+@media all and (min-width: 320px) and (max-width: 479px) {
+    .slogan h1{
+        font-size: 17px;
+    }
+
+    #logo_zaj img {
+        width: 35%;
+        height: 20%;
+    }
+
+    .slogan li {
+        margin-left: 3%;
+        text-align: left;
+        font-size: 8px;
+    }
+
+    #zajawka_li2 {
+        text-indent: 2px;
+    }
+
+    #zajawka_li3 {
+        text-indent: 4px;
+    }
+
+    #link_formularz {
+        width: 200px;
+        height: 50px;
+
+
 }
 
 /* FZ7NI-5 ZAJAWKA jako header - KONIEC */
