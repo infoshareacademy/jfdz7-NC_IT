@@ -321,7 +321,7 @@ header {
 
 .features {
     display: inline-block;
-    padding: 30px;
+    padding: 35px;
     margin-top: 130px;
     margin-bottom: 180px;
 }
@@ -331,7 +331,6 @@ header {
 }
 
 .features-p {
-    font-family: "Avenir Next";
     text-transform: uppercase;
     padding: 7px;
 }
