@@ -317,9 +317,12 @@ header {
     width: 100px;
     height: 100px;
     border: 1px solid #000000;
-
 }
-
+.center {
+    display: block;
+    margin: auto;
+    /*width: 40%;*/
+}
 /*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
 .fa {
     font-size: 80px;
