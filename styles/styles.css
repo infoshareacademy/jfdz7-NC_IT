@@ -327,7 +327,7 @@ header {
     background-color: #E0BDAA;
 }
 
-p {
+.features-p {
     font-family: "Avenir Next";
     text-transform: uppercase;
     padding: 7px;
