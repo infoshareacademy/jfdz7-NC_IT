@@ -11,12 +11,15 @@ https://color.adobe.com/pl/Kolorystyka-strony-color-theme-10064343/
 
  */
 
+/* Czcionka na stronę font-family: 'Lato', sans-serif;*/
+
 /*dopasowanie strony do okna przeglądarki + reset narzuconych marginesów */
 
 html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    font-family: 'Lato', sans-serif;
 }
 
 /*reset ustawień domyślnych dla wszystkich elementów HTML */
@@ -33,17 +36,7 @@ html, body {
 
 /* FZ7NI-5 ZAJAWKA jako header - START */
 
-@font-face {
-    font-family: 'Track';
-    src: url('../fonts/Track.ttf');
-    font-family: 'Track Italic';
-    src: url('../fonts/Track Italic.ttf');
-    font-family: 'Slabo27px-Regular';
-    src: url('../fonts/Slabo27px-Regular.ttf');
-    font-family: 'RiseofKingdom';
-    src: url('../fonts/RiseofKingdom.ttf');
 
-}
 
 header {
     margin: 0px auto;
@@ -52,7 +45,6 @@ header {
     display: block;
     background: url(../img/zajawka_tlo.jpg) no-repeat center;
     background-size: cover;
-    font-family: "Slabo27px-Regular";
     position: relative;
 
 }
@@ -281,7 +273,6 @@ header {
     #link_formularz {
         width: 200px;
         height: 50px;
-
     }
 }
 
