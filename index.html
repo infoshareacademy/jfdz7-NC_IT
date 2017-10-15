@@ -2,20 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pomocnik Zakupowy</title>
+
     <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jQuery.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+    <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+    <title>Pomocnik Zakupowy</title>
 </head>
 <body>
 
 
 <!-- FZ7NI-5 ZAJAWKA-->
-<header>
+<header id="intro">
+    <!-- Bootstrap navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Pomocnik zakupowy</a>
+                </div>
 
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item active">
+                            <a class="nav-link scroll" href="#intro">Góra</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#info">Info</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </div>
+    </nav>
     <div class="slogan">
         <h1>ZRÓBMY WSPÓLNIE KOLEJNY KROK</h1>
         <div id="logo_zaj"><img src="img/zajawka_pomocnik.png"/></div>
@@ -36,38 +72,38 @@
 </header>
 
 <!-- FZ7NI-5 KONIEC ZAJAWKI-->
-<main>
+
 
 <!-- FZ7NI-6 SPIS PLANOWANYCH FUNKCJI-->
 
-    <div class="features-pics" align="center">
-        <div class="features">
-            <i class="fa fa-tags fa-4x"></i>
-            <p class="features-p">Wyszukiwarka najlepszej oferty</p>
-        </div>
-
-        <div class="features">
-            <i class="fa fa-barcode fa-4x"></i>
-            <p class="features-p">Skaner produktów</p>
-        </div>
-
-        <div class="features">
-            <i class="fa fa-users fa-4x"></i>
-            <p class="features-p">Opinie użytkowników</p>
-        </div>
-
-        <div class="features">
-            <i class="fa fa-mobile fa-4x"></i>
-            <p class="features-p">Dostęp z każdego urządzenia</p>
-        </div>
+<div class="features-pics" align="center" id="features">
+    <div class="features">
+        <i class="fa fa-tags fa-4x"></i>
+        <p class="features-p">Wyszukiwarka najlepszej oferty</p>
     </div>
+
+    <div class="features">
+        <i class="fa fa-barcode fa-4x"></i>
+        <p class="features-p">Skaner produktów</p>
+    </div>
+
+    <div class="features">
+        <i class="fa fa-users fa-4x"></i>
+        <p class="features-p">Opinie użytkowników</p>
+    </div>
+
+    <div class="features">
+        <i class="fa fa-mobile fa-4x"></i>
+        <p class="features-p">Dostęp z każdego urządzenia</p>
+    </div>
+</div>
 
 <!-- FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI-->
 
 
 <!-- FZ7NI-12 dodatkowe info o produkcie-->
-
-    <section class="info">
+<main>
+    <section id="info" >
         <div class="row">
             <div class="column">
                 <div>
@@ -116,5 +152,11 @@
         </div>
     </section>
 </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jQuery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
