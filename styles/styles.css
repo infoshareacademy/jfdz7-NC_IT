@@ -247,7 +247,7 @@ header {
 }
 
 @media all and (min-width: 320px) and (max-width: 479px) {
-    .slogan h1{
+    .slogan h1 {
         font-size: 17px;
     }
 
@@ -274,7 +274,6 @@ header {
         width: 200px;
         height: 50px;
     }
-
 }
 
 /* FZ7NI-5 ZAJAWKA jako header - KONIEC */
@@ -328,7 +327,7 @@ header {
     background-color: #E0BDAA;
 }
 
-p {
+.features-p {
     font-family: "Avenir Next";
     text-transform: uppercase;
     padding: 7px;
