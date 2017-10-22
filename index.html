@@ -19,8 +19,32 @@
 
 
 <!-- FZ7NI-5 ZAJAWKA-->
-<header>
+<header id="zajawka">
     <!-- Bootstrap navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#zajawka">Pomocnik zakupowy <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Funkcje</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#info">Informacje</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sign-in">Zapisz się</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="slogan">
         <h1>ZRÓBMY WSPÓLNIE KOLEJNY KROK</h1>
@@ -121,6 +145,36 @@
         </div>
 </div>
 
+<!--sign-in section-->
+
+<section id="sign-in d">
+    <div class="content d-flex flex-column justify-content-center">
+
+        <p>Jeśli chcesz pierwszy dowiedzieć się o starcie Pomodnika zakupowego, to zapisz się na powiadomienie!</p>
+
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Imię</label>
+                    <input type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInput" placeholder="Imię">
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                    <div class="input-group mb-2 mb-sm-0">
+                        <div class="input-group-addon">@</div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope"></i> Zpisz się!</button>
+                </div>
+            </div>
+        </form>
+
+        <p>Obiecujemy wysłać tylko jedną wiadomość z informacją o premierze naszej aplikacji.</p>
+
+    </div>
+</section>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>

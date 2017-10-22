@@ -202,10 +202,6 @@ header {
 
 /* FZ7NI-12 wiecej info - KONIEC */
 /*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
-.fa {
-    font-size: 80px;
-}
-
 .features {
     display: inline-block;
     padding: 30px;
@@ -229,3 +225,23 @@ header {
     border-radius: 5%;
 }
 /*FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI*/
+
+/*sign-in section*/
+
+#sign-in {
+    height: 100vh;
+    background: url("../img/sign-in.jpg") center fixed;
+    /*https://picjumbo.com/work-in-progress-web-design-sketches/*/
+    background-size: cover;
+}
+
+#sign-in .content {
+    background: rgba(94, 65, 49, 0.6);
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+}
+
