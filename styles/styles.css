@@ -166,6 +166,10 @@ header {
     background-color: #F28E67;
 }
 
+.feat-padding {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+}
 /* FZ7NI-12 wiecej info - KONIEC */
 /*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
 
@@ -176,7 +180,6 @@ header {
 }
 
 .features-pics {
-    background-color: #E0BDAA;
     min-height: 400px;
     padding: 80px;
 }
