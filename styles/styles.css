@@ -202,30 +202,37 @@ header {
 
 /* FZ7NI-12 wiecej info - KONIEC */
 /*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
-.fa {
-    font-size: 80px;
-}
 
-.features {
+.feat {
     display: inline-block;
-    padding: 30px;
-    margin-top: 130px;
-    margin-bottom: 180px;
+    color: #000000;
+    padding: 5px;
 }
 
 .features-pics {
     background-color: #E0BDAA;
+    min-height: 400px;
+    padding: 80px;
 }
 
 .features-p {
-    font-family: "Avenir Next";
     text-transform: uppercase;
     padding: 7px;
 }
 
-.features:hover {
+.feat:hover {
     color: #893E16;
     border: solid 0.5px;
     border-radius: 5%;
 }
+
+.feat-describe {
+    color: #893E16;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
 /*FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI*/
+
