@@ -277,18 +277,21 @@ header {
 }
 
 /* FZ7NI-5 ZAJAWKA jako header - KONIEC */
-
-.functionality {
-    width: 40%;
+/* FZ7NI-12 wiecej info - START */
+.info {
+    background-color: #ffe1af;
+    height: 120%;
 }
-
 .column {
     float: left;
     width: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
 }
-.row {
-    margin: auto;
-    width: 60%;
+.row-info {
+    padding-left: 30%;
+    padding-right: 30%;
 }
 .column:after {
     content: '';
@@ -312,8 +315,9 @@ header {
 .center {
     display: block;
     margin: auto;
-    /*width: 40%;*/
 }
+
+/* FZ7NI-12 wiecej info - KONIEC */
 /*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
 .fa {
     font-size: 80px;
