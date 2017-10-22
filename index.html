@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
 
+    <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
     <title>Pomocnik Zakupowy</title>
 </head>
@@ -21,37 +21,53 @@
 <!-- FZ7NI-5 ZAJAWKA-->
 <header>
     <!-- Bootstrap navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Pomocnik zakupowy</a>
+                </div>
 
-    <div class="container-fluid slogan">
-
-        <div class="row">
-            <div class="col">
-            <h1>ZRÓBMY WSPÓLNIE KOLEJNY KROK</h1>
-            </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item active">
+                            <a class="nav-link scroll" href="#intro">Góra</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" href="#info">Info</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
         </div>
-        <br>
-        <div class="row">
-            <div class="col">
-                <div id="logo_zaj"><img class="img-fluid" src="img/zajawka_pomocnik.png"/></div>
-            </div>
-        </div>
-
-        <br>
-        <div class="row">
-            <div class="col">
+    </nav>
+    <div class="slogan">
+        <h1>ZRÓBMY WSPÓLNIE KOLEJNY KROK</h1>
+        <div id="logo_zaj"><img src="img/zajawka_pomocnik.png"/></div>
         <ul>
             <li id="zajawka_li1">Postanowiłeś kupić nowy sprzęt RTV i AGD?</li>
             <li id="zajawka_li2">Twój osobisty Pomocnik Zakupowy chętnie Ci w tym pomoże.</li>
             <li id="zajawka_li3">Przeszuka za Ciebie wszystkie dostępne oferty i znajdzie najniższe ceny wraz z opiniami osób takich jak Ty!</li>
         </ul>
-            </div>
-        </div>
-        <br>
+    </div>
 
-    <div id="link_formularz" class="container-fluid text-center">
-        <a href="#" class="col btn btn-secondary btn-lg" role="button" aria-pressed="true">Zapisz się na premierę!</a>
+    <div id="link_formularz" >
+        <a href="#">
+            <img src="img/Link_form.png"/>
+        </a>
     </div>
-    </div>
+
 
 </header>
 
@@ -110,10 +126,11 @@
                     <p class="imgText">Pomocnik Zakupowy ma wyszukiwanie według ceny, opinii użytkowników, etc.</p>
                 </div>
             </div>
-            <div class="column">
-                <div>
-                    <img class="img center" src="img/functionality-simplicity.jpg" alt="Obrazek 5">
-                    <h3 class="imgTitle">Prostota obsługi</h3>
+            <div class="column col-sm-2"></div>
+            <div class="column col-sm-3">
+                <div class="feat feat-padding" align="center">
+                    <i class="fa fa-simplybuilt fa-4x"></i>
+                    <h3 class="features-p">Prostota obsługi</h3>
                     <p class="imgText">Pomocnik Zakupowy jest prosty i intuicyjny w obsłudze</p>
                 </div>
                 <div>
