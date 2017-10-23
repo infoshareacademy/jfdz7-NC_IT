@@ -79,33 +79,29 @@ html, body {
 header {
     margin: 0px auto;
     width: 100%;
-    height: inherit;
-    display: block;
-    background: url(../img/zajawka_tlo.jpg) no-repeat center;
+    height:100vh;
+    display: table;
+    background: url(../img/zajawkatlo.jpeg) no-repeat center;
     background-size: cover;
     position: relative;
 
 }
 
-.container-fluid {
-    padding: 0px;
-}
-
 .slogan {
-    display: inline-block;
+    display: table-cell;
     width: 100%;
-    max-height: inherit;
-    margin: 200px auto;
+    height: 60vh;
+    vertical-align: middle;
     text-align: center;
-    background-color: rgba(86,46,37,0.7);
-    color: rgb(240,234,210);
-    padding: 15px 0;
-    position: absolute;
-    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .slogan h1 {
-    font-size: 70px;
+    font-size: 5vw;
+    white-space:nowrap;
+    font-weight: bold;
 }
 
 #logo_zaj {
@@ -113,18 +109,18 @@ header {
 }
 
 #logo_zaj img {
-    width: 30%;
-    height: 15%;
+    width: 50vw;
 }
 
 .slogan ul {
     list-style: none;
+    background-color: rgba(0,0,0,0.4);
 }
 
 .slogan li {
     margin-left: 10%;
     text-align: left;
-    font-size: 25px;
+    font-size: 1.5vw;
 }
 
 #zajawka_li2 {
@@ -135,25 +131,15 @@ header {
     text-indent: 80px;
 }
 
-#link_formularz {
-    width: 250px;
-    height: 70px;
-    bottom: 0px;
-    background-color: rgba(86,46,37,0.9);
-    border-radius: 1em;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
 
+#link_formularz a {
+    text-align: center;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    font-size: 1.5vw;
+    width: 20vw;
 }
 
-#link_formularz img {
-    width: 90%;
-    height: 90%;
-    margin: 0.2em 0.8em;
-}
 
 /* RESPONSYWNOŚĆ ZAJAWKI @MEDIA */
 
@@ -162,14 +148,45 @@ header {
 /* FZ7NI-5 ZAJAWKA jako header - KONIEC */
 /* FZ7NI-12 wiecej info - START */
 
-.bg-3 {
-    background-color: #F28E67;
+.info {
+    background-color: #ffe1af;
+    height: 120%;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+.row-info {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+.column:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.imgTitle {
+    text-align: center;
+}
+.imgText {
+    text-align: justify;
+}
+.table {
+    margin: auto;
+}
+.img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000000;
+}
+.center {
+    display: block;
+    margin: auto;
 }
 
-.feat-padding {
-    padding-top: 25px !important;
-    padding-bottom: 25px !important;
-}
 /* FZ7NI-12 wiecej info - KONIEC */
 /*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
 
