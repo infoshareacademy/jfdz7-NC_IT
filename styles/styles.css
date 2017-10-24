@@ -192,3 +192,28 @@ header {
 
 /*FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI*/
 
+/* FZ7NI-7 sign-in section*/
+
+#sign-in {
+    background: url(../img/sign-in.jpg) no-repeat center fixed;
+    /*https://picjumbo.com/work-in-progress-web-design-sketches/*/
+    background-size: cover;
+}
+
+#sign-in .content {
+    margin: 100px 0;
+    height: auto;
+    padding: 25px;
+    background: rgba(44, 62, 80, 0.7);
+    color: #ecf0f1;
+}
+
+#sign-in .lead {
+    font-family: sans-serif;
+}
+
+#sign-in form div div {
+    margin-bottom: 5px;
+}
+
+/* FZ7NI-7 end of sign-in section*/
