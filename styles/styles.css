@@ -217,3 +217,27 @@ header {
 }
 
 /* FZ7NI-7 end of sign-in section*/
+
+/*FZ7NI-9 INFORMACJE O ZESPOLE*/
+.team-describe {
+    color: #893E16;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-bottom: 60px;
+    display: inline-block;
+}
+
+.team {
+    min-height: 400px;
+    padding: 80px;
+}
+
+.team-member {
+    color: dimgrey;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+/*FZ9NI-9 KONIEC INFORMACJE O ZESPOLE*/
