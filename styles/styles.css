@@ -190,6 +190,12 @@ header {
     padding-bottom: 60px;
 }
 
+@media screen and (max-width: 575px) {
+    .features-pics {
+        padding: 5px;
+    }
+}
+
 /*FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI*/
 
 /* FZ7NI-8 navbar*/
@@ -231,7 +237,7 @@ header {
 /* FZ7NI-7 end of sign-in section*/
 
 /*FZ7NI-9 INFORMACJE O ZESPOLE*/
-.team-describe {
+#team-info .team-describe {
     color: #893E16;
     font-size: 30px;
     letter-spacing: 5px;
@@ -245,11 +251,26 @@ header {
     padding: 80px;
 }
 
-.team-member {
+#team-info .team-member {
     color: dimgrey;
     font-weight: 100;
     font-size: 20px;
     letter-spacing: 2px;
+    padding: 20px;
+
+}
+
+#team-info a {
+    padding: 5px;
+    text-decoration: none;
+    color: #000000;
+}
+
+#team-info a:hover {
+    color:#d3d3d3;
+}
+
+.member-box {
     padding: 20px;
 }
 /*FZ7NI-9 KONIEC INFORMACJE O ZESPOLE*/
