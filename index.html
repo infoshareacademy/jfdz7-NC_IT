@@ -24,7 +24,7 @@
 
 <header id="top">
 
-    <nav class="navbar bg-dark navbar-dark navbar-expand-md fixed-top">
+    <nav class="navbar bg-dark navbar-dark navbar-expand-sm fixed-top">
         <a href="#" class="navbar-brand"><span class="fa fa-cart-plus"></span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,14 +45,14 @@
                     <a class="nav-link scroll" href="#info">Info</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link scroll" href="#">O nas</a>
+                    <a class="nav-link scroll" href="#team-info">O nas</a>
                 </li>
             </ul>
         </div>
     </nav>
 
 <!-- FZ7NI-5 ZAJAWKA-->
-    <div class="container-fluid slogan">
+    <section class="container-fluid slogan">
 
 
         <div class="row">
@@ -63,26 +63,26 @@
         <br>
         <div class="row">
             <div class="col">
-                <div id="logo_zaj"><img class="img-fluid" src="img/zajawka_pomocnik.png"/></div>
+                <div id="logo_zaj"><img src="img/zajawka_pomocnik.png"/> </div>
             </div>
         </div>
 
-        <br>
+
         <div class="row">
             <div class="col">
-        <ul>
-            <li id="zajawka_li1">Postanowiłeś kupić nowy sprzęt RTV i AGD?</li>
-            <li id="zajawka_li2">Twój osobisty Pomocnik Zakupowy chętnie Ci w tym pomoże.</li>
-            <li id="zajawka_li3">Przeszuka za Ciebie wszystkie dostępne oferty i znajdzie najniższe ceny wraz z opiniami osób takich jak Ty!</li>
-        </ul>
+                <ul>
+                    <li class="zajawka_li1">Postanowiłeś kupić nowy sprzęt RTV i AGD?</li>
+                    <li class="zajawka_li2">Twój osobisty Pomocnik Zakupowy chętnie Ci w tym pomoże.</li>
+                    <li class="zajawka_li3">Przeszuka za Ciebie wszystkie dostępne oferty i znajdzie najniższe ceny wraz z opiniami osób takich jak Ty!</li>
+                </ul>
             </div>
         </div>
-        <br>
+
 
     <div id="link_formularz" class="container-fluid text-center">
-        <a href="#" class="col btn btn-outline-secondary btn-lg" role="button" aria-pressed="true">Zapisz się na premierę!</a>
+        <a href="#" class="col-4 btn btn-outline-secondary btn-lg" role="button" aria-pressed="true">Zapisz się na premierę!</a>
     </div>
-    </div>
+    </section>
 
 </header>
 
@@ -130,23 +130,23 @@
 
             <form>
 
-                <div class="form-group row">
+                <div class="form-group row justify-content-center">
 
-                    <div class="col-sm-12 col-md-4 offset-md-1">
+                    <div class="col-md-5">
 
                         <label class="sr-only" for="name">Twoje imię:</label>
                         <input type="text" class="form-control" id="name" placeholder="Twoje imię">
 
                     </div>
 
-                    <div class="col-sm-12 col-md-4">
+                    <div class="col-md-5">
 
                         <label class="sr-only" for="email">Twój e-mail"</label>
                         <input type="email" class="form-control" id="email" placeholder="Twój e-mail">
 
                     </div>
 
-                    <div class="col-sm-12 col-md-2">
+                    <div class="col-md-10 col-lg-2">
 
                         <button type="submit" class="btn btn-block btn-dark"><span class="fa fa-envelope"></span> Zapisz się!</button>
 
@@ -216,6 +216,34 @@
         </div>
     </div>
 </div>
+
+<!-- FZ7NI-9 INFORMACJE O ZESPOLE -->
+
+<div align="center" id="team-info" class="team">
+    <h1 class="team-describe">Informacje o Zespole</h1>
+    <div class="row">
+        <div>
+            <i class="fa fa-user fa-4x"></i>
+            <p class="team-member">Marcin Płużyński</p>
+            <p>Strona o mnie</p>
+            <p>LinkedIn</p>
+        </div>
+        <div>
+            <i class="fa fa-user fa-4x"></i>
+            <p class="team-member">Mateusz Gorczyca</p>
+        </div>
+        <div>
+            <i class="fa fa-user fa-4x"></i>
+            <p class="team-member">Dominik Manowski</p>
+        </div>
+        <div>
+            <i class="fa fa-user fa-4x"></i>
+            <p class="team-member">Rafał Dombrowski</p>
+        </div>
+    </div>
+</div>
+
+<!-- FZ7NI-9 KONIEC INFORMACJE O ZESPOLE -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="js/smoothScroll.js"></script>

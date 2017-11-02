@@ -95,6 +95,8 @@ header {
     text-align: center;
     color: whitesmoke;
     font-family: 'Quicksand', sans-serif;
+    text-shadow: 0px 2px rgba(0,0,0,0.8);
+    padding-top: 65px;
 
 }
 
@@ -106,6 +108,7 @@ header {
 
 #logo_zaj {
     margin: 0px auto;
+    margin-bottom: 20px;
 }
 
 #logo_zaj img {
@@ -115,33 +118,54 @@ header {
 .slogan ul {
     list-style: none;
     background-color: rgba(0,0,0,0.4);
+    margin-bottom: 15px;
 }
 
 .slogan li {
-    margin-left: 10%;
+    margin-left: 5%;
     text-align: left;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
+    line-height: 30px;
 }
 
-#zajawka_li2 {
+.zajawka_li2 {
+    text-indent: 20px;
+}
+
+.zajawka_li3 {
     text-indent: 40px;
-}
-
-#zajawka_li3 {
-    text-indent: 80px;
 }
 
 
 #link_formularz a {
-    text-align: center;
     color: whitesmoke;
     border-color: whitesmoke;
     font-size: 1.5vw;
-    width: 20vw;
+    background-color: rgba(0,0,0,0.4);
 }
 
+#link_formularz a:hover {
+    background-color: rgba(0,0,0,0.9);;
+}
 
 /* RESPONSYWNOŚĆ ZAJAWKI @MEDIA */
+
+@media screen and (max-width: 730px) {
+    .slogan li {
+        margin-left: 2%;
+        text-align: left;
+        font-size: 2.5vw;
+        line-height: 15px;
+    }
+
+    .zajawka_li2 {
+        text-indent: 0px;
+    }
+
+    .zajawka_li3 {
+        text-indent: 0px;
+    }
+}
 
 
 
@@ -192,6 +216,18 @@ header {
 
 /*FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI*/
 
+/* FZ7NI-8 navbar*/
+
+.navbar .navbar-brand {
+    margin-left: 0.7em;
+}
+
+.nav-item {
+    margin-right: 0.7em;
+}
+
+/* FZ7NI-8 end of navbar*/
+
 /* FZ7NI-7 sign-in section*/
 
 #sign-in {
@@ -217,3 +253,27 @@ header {
 }
 
 /* FZ7NI-7 end of sign-in section*/
+
+/*FZ7NI-9 INFORMACJE O ZESPOLE*/
+.team-describe {
+    color: #893E16;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-bottom: 60px;
+    display: inline-block;
+}
+
+.team {
+    min-height: 400px;
+    padding: 80px;
+}
+
+.team-member {
+    color: dimgrey;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+/*FZ7NI-9 KONIEC INFORMACJE O ZESPOLE*/
