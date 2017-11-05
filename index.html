@@ -22,18 +22,18 @@
 
 <!-- FZ7NI-8 Bootstrap navbar -->
 
-<header id="top">
+<header id="header">
 
-    <nav class="navbar bg-dark navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar bg-dark navbar-dark navbar-expand-md fixed-top">
         <a href="#" class="navbar-brand"><span class="fa fa-cart-plus"></span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link scroll" href="#top">Pomocnik zakupowy <span class="sr-only">(current)</span></a>
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item ">
+                    <a class="nav-link scroll" href="#header">Pomocnik zakupowy <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link scroll" href="#features">Funkcje</a>
@@ -42,7 +42,7 @@
                     <a class="nav-link scroll" href="#sign-in">Premiera!</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link scroll" href="#info">Info</a>
+                    <a class="nav-link scroll" href="#product-info">Więcej informacji</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link scroll" href="#team-info">O nas</a>
@@ -52,7 +52,7 @@
     </nav>
 
 <!-- FZ7NI-5 ZAJAWKA-->
-    <div class="container-fluid slogan">
+    <section class="container-fluid slogan">
 
 
         <div class="row">
@@ -63,26 +63,26 @@
         <br>
         <div class="row">
             <div class="col">
-                <div id="logo_zaj"><img class="img-fluid" src="img/zajawka_pomocnik.png"/></div>
+                <div id="logo_zaj"><img src="img/zajawka_pomocnik.png"/> </div>
             </div>
         </div>
 
-        <br>
+
         <div class="row">
             <div class="col">
-        <ul>
-            <li id="zajawka_li1">Postanowiłeś kupić nowy sprzęt RTV i AGD?</li>
-            <li id="zajawka_li2">Twój osobisty Pomocnik Zakupowy chętnie Ci w tym pomoże.</li>
-            <li id="zajawka_li3">Przeszuka za Ciebie wszystkie dostępne oferty i znajdzie najniższe ceny wraz z opiniami osób takich jak Ty!</li>
-        </ul>
+                <ul>
+                    <li class="zajawka_li1">Postanowiłeś kupić nowy sprzęt RTV i AGD?</li>
+                    <li class="zajawka_li2">Twój osobisty Pomocnik Zakupowy chętnie Ci w tym pomoże.</li>
+                    <li class="zajawka_li3">Przeszuka za Ciebie wszystkie dostępne oferty i znajdzie najniższe ceny wraz z opiniami osób takich jak Ty!</li>
+                </ul>
             </div>
         </div>
-        <br>
+
 
     <div id="link_formularz" class="container-fluid text-center">
-        <a href="#" class="col btn btn-outline-secondary btn-lg" role="button" aria-pressed="true">Zapisz się na premierę!</a>
+        <a href="#" class="col-4 btn btn-outline-secondary btn-lg" role="button" aria-pressed="true">Zapisz się na premierę!</a>
     </div>
-    </div>
+    </section>
 
 </header>
 
@@ -92,7 +92,7 @@
 <!-- FZ7NI-6 SPIS PLANOWANYCH FUNKCJI-->
 
 <div class="features-pics" align="center" id="features">
-    <h1 class="feat-describe">Najważniejsze funkcje aplikacji</h1>
+    <h2 class="feat-describe">Najważniejsze funkcje aplikacji</h2>
     <div class="row">
         <div class="feat col-sm-6 col-md-3">
             <i class="fa  fa-tags fa-4x"></i>
@@ -165,7 +165,7 @@
 <!-- FZ7NI-7 end of sign-in section -->
 
 <!-- FZ7NI-12 dodatkowe info o produkcie-->
-<div class="features-pics container-fluid bg-3" align="center" id="info">
+<div class="features-pics container-fluid bg-3" align="center" id="product-info">
     <h1 class="feat-describe">Dodatkowe informacje o produkcie</h1>
     <div class="row">
         <div class="column col-md-3 col-sm-6">
@@ -219,26 +219,32 @@
 
 <!-- FZ7NI-9 INFORMACJE O ZESPOLE -->
 
-<div align="center" id="team-info" class="team">
-    <h1 class="team-describe">Informacje o Zespole</h1>
+<div id="team-info" align="center" class="team">
+    <h2 class="team-describe">Informacje o Zespole</h2>
     <div class="row">
-        <div>
-            <i class="fa fa-user fa-4x"></i>
+        <div class="member-box col-sm-6 col-md-3">
+            <img src="img/member1.png" class="rounded-circle" height="170" alt="Marcin">
             <p class="team-member">Marcin Płużyński</p>
-            <p>Strona o mnie</p>
-            <p>LinkedIn</p>
+            <p class="member-page"><a href="#">Strona o mnie</a></p>
+            <p class="fa fa-linkedin"><a href="#">LinkedIn</a></p>
         </div>
-        <div>
-            <i class="fa fa-user fa-4x"></i>
+        <div class="member-box col-sm-6 col-md-3">
+            <img src="img/member2.png" class="rounded-circle" height="170" alt="Mateusz">
             <p class="team-member">Mateusz Gorczyca</p>
+            <p class="member-page"><a href="#">Strona o mnie</a></p>
+            <p class="fa fa-linkedin"><a href="#">LinkedIn</a></p>
         </div>
-        <div>
-            <i class="fa fa-user fa-4x"></i>
+        <div class="member-box col-sm-6 col-md-3">
+            <img src="img/member3.png" class="rounded-circle" height="170" alt="Mateusz">
             <p class="team-member">Dominik Manowski</p>
+            <p class="member-page"><a href="#">Strona o mnie</a></p>
+            <p class="fa fa-linkedin"><a href="#">LinkedIn</a></p>
         </div>
-        <div>
-            <i class="fa fa-user fa-4x"></i>
+        <div class="member-box col-sm-6 col-md-3">
+            <img src="img/member4.png" class="rounded-circle" height="170" alt="Rafał">
             <p class="team-member">Rafał Dombrowski</p>
+            <p class="member-page"><a href="#">Strona o mnie</a></p>
+            <p class="fa fa-linkedin"><a href="#">LinkedIn</a></p>
         </div>
     </div>
 </div>
