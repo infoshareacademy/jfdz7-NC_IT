@@ -189,7 +189,7 @@ header {
 /* FZ7NI-12 wiecej info - KONIEC */
 /*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
 
-.feat {
+#features .feat {
     display: inline-block;
     color: #000000;
     padding: 5px;
@@ -200,18 +200,12 @@ header {
     padding: 80px;
 }
 
-.features-p {
+#features .features-p {
     text-transform: uppercase;
     padding: 7px;
 }
 
-.feat:hover {
-    color: #893E16;
-    border: solid 0.5px;
-    border-radius: 5%;
-}
-
-.feat-describe {
+#features .feat-describe {
     color: #893E16;
     font-size: 30px;
     letter-spacing: 5px;
@@ -278,6 +272,7 @@ header {
 .team {
     min-height: 400px;
     padding: 80px;
+    background-color: #d3d3d3;
 }
 
 #team-info .team-member {
@@ -299,7 +294,8 @@ header {
     color:#d3d3d3;
 }
 
-.member-box {
-    padding: 20px;
+#team-info img {
+    width: 65%;
+    margin-top: 25px;
 }
 /*FZ7NI-9 KONIEC INFORMACJE O ZESPOLE*/
