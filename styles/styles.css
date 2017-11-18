@@ -79,169 +79,227 @@ html, body {
 header {
     margin: 0px auto;
     width: 100%;
-    height: inherit;
-    display: block;
-    background: url(../img/zajawka_tlo.jpg) no-repeat center;
+    height:100vh;
+    display: table;
+    background: url(../img/zajawkatlo.jpeg) no-repeat center;
     background-size: cover;
     position: relative;
 
 }
 
-.container-fluid {
-    padding: 0px;
-}
-
 .slogan {
-    display: inline-block;
+    display: table-cell;
     width: 100%;
-    max-height: inherit;
-    margin: 200px auto;
+    height: 60vh;
+    vertical-align: middle;
     text-align: center;
-    background-color: rgba(86,46,37,0.7);
-    color: rgb(240,234,210);
-    padding: 15px 0;
-    position: absolute;
-    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 0px 2px rgba(0,0,0,0.8);
+    padding-top: 65px;
+
 }
 
 .slogan h1 {
-    font-size: 70px;
+    font-size: 5vw;
+    white-space:nowrap;
+    font-weight: bold;
 }
 
 #logo_zaj {
     margin: 0px auto;
+    margin-bottom: 20px;
 }
 
 #logo_zaj img {
-    width: 30%;
-    height: 15%;
+    width: 50vw;
 }
 
 .slogan ul {
     list-style: none;
+    background-color: rgba(0,0,0,0.4);
+    margin-bottom: 15px;
 }
 
 .slogan li {
-    margin-left: 10%;
+    margin-left: 5%;
     text-align: left;
-    font-size: 25px;
+    font-size: 1.7vw;
+    line-height: 30px;
 }
 
-#zajawka_li2 {
+.zajawka_li2 {
+    text-indent: 20px;
+}
+
+.zajawka_li3 {
     text-indent: 40px;
 }
 
-#zajawka_li3 {
-    text-indent: 80px;
+
+#link_formularz a {
+    color: whitesmoke;
+    border-color: whitesmoke;
+    font-size: 1.5vw;
+    background-color: rgba(0,0,0,0.4);
 }
 
-#link_formularz {
-    width: 250px;
-    height: 70px;
-    bottom: 0px;
-    background-color: rgba(86,46,37,0.9);
-    border-radius: 1em;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-
-}
-
-#link_formularz img {
-    width: 90%;
-    height: 90%;
-    margin: 0.2em 0.8em;
+#link_formularz a:hover {
+    background-color: rgba(0,0,0,0.9);;
 }
 
 /* RESPONSYWNOŚĆ ZAJAWKI @MEDIA */
+
+@media screen and (max-width: 730px) {
+    .slogan li {
+        margin-left: 2%;
+        text-align: left;
+        font-size: 2.5vw;
+        line-height: 15px;
+    }
+
+    .zajawka_li2 {
+        text-indent: 0px;
+    }
+
+    .zajawka_li3 {
+        text-indent: 0px;
+    }
+}
 
 
 
 /* FZ7NI-5 ZAJAWKA jako header - KONIEC */
 /* FZ7NI-12 wiecej info - START */
-.info {
-    background-color: #ffe1af;
-    height: 120%;
-}
-.column {
-    float: left;
-    width: 50%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 10%;
-}
-.row-info {
-    padding-left: 30%;
-    padding-right: 30%;
-}
-.column:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-.imgTitle {
-    text-align: center;
-}
-.imgText {
-    text-align: justify;
-}
-.table {
-    margin: auto;
-}
-.img {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000000;
-}
-.center {
-    display: block;
-    margin: auto;
+
+.bg-3 {
+    background-color: white;
 }
 
-/* FZ7NI-12 wiecej info - KONIEC */
-/*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
+.features-pics .feat-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
 .features {
     display: inline-block;
-    padding: 30px;
-    margin-top: 130px;
-    margin-bottom: 180px;
+    color: #000000;
+    padding: 5px;
+}
+/* FZ7NI-12 wiecej info - KONIEC */
+/*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
+
+.feat {
+    display: inline-block;
+    color: #000000;
+    padding: 5px;
 }
 
 .features-pics {
-    background-color: #E0BDAA;
+    min-height: 400px;
+    padding: 80px;
 }
 
 .features-p {
-    font-family: "Avenir Next";
     text-transform: uppercase;
     padding: 7px;
 }
 
-.features:hover {
+.feat:hover {
     color: #893E16;
     border: solid 0.5px;
     border-radius: 5%;
 }
+
+.feat-describe {
+    color: #893E16;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 575px) {
+    .features-pics {
+        padding: 5px;
+    }
+}
+
 /*FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI*/
 
-/*sign-in section*/
+/* FZ7NI-8 navbar*/
+
+.navbar .navbar-brand {
+    margin-left: 0.7em;
+}
+
+.nav-item {
+    margin-right: 0.7em;
+}
+
+/* FZ7NI-8 end of navbar*/
+
+/* FZ7NI-7 sign-in section*/
 
 #sign-in {
-    height: 100vh;
-    background: url("../img/sign-in.jpg") center fixed;
+    background: url(../img/sign-in.jpg) no-repeat center fixed;
     /*https://picjumbo.com/work-in-progress-web-design-sketches/*/
     background-size: cover;
 }
 
 #sign-in .content {
-    background: rgba(94, 65, 49, 0.6);
-    width: 100%;
-    padding: 50px 20px;
+    margin: 100px 0;
+    height: auto;
+    padding: 25px;
+    background: rgba(44, 62, 80, 0.7);
+    color: #ecf0f1;
 }
 
-.content p {
-    font-size: 1.2em;
+#sign-in .lead {
+    font-family: sans-serif;
 }
 
+#sign-in form div div {
+    margin-bottom: 5px;
+}
+
+/* FZ7NI-7 end of sign-in section*/
+
+/*FZ7NI-9 INFORMACJE O ZESPOLE*/
+#team-info .team-describe {
+    color: #893E16;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-bottom: 60px;
+    display: inline-block;
+}
+
+.team {
+    min-height: 400px;
+    padding: 80px;
+}
+
+#team-info .team-member {
+    color: dimgrey;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 20px;
+
+}
+
+#team-info a {
+    padding: 5px;
+    text-decoration: none;
+    color: #000000;
+}
+
+#team-info a:hover {
+    color:#d3d3d3;
+}
+
+.member-box {
+    padding: 20px;
+}
+/*FZ7NI-9 KONIEC INFORMACJE O ZESPOLE*/

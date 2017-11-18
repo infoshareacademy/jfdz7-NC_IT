@@ -9,59 +9,80 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+
     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles/styles.css">
 
     <title>Pomocnik Zakupowy</title>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="200">
 
 
-<!-- FZ7NI-5 ZAJAWKA-->
-<header id="zajawka">
-    <!-- Bootstrap navbar -->
+<!-- FZ7NI-8 Bootstrap navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Logo</a>
+<header id="header">
+
+    <nav class="navbar bg-dark navbar-dark navbar-expand-md fixed-top">
+        <a href="#" class="navbar-brand"><span class="fa fa-cart-plus"></span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#zajawka">Pomocnik zakupowy <span class="sr-only">(current)</span></a>
+            <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item ">
+                    <a class="nav-link scroll" href="#header">Pomocnik zakupowy <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#features">Funkcje</a>
+                    <a class="nav-link scroll" href="#features">Funkcje</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#info">Informacje</a>
+                    <a class="nav-link scroll" href="#sign-in">Premiera!</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#sign-in">Zapisz się</a>
+                    <a class="nav-link scroll" href="#product-info">Więcej informacji</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll" href="#team-info">O nas</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="slogan">
-        <h1>ZRÓBMY WSPÓLNIE KOLEJNY KROK</h1>
-        <div id="logo_zaj"><img src="img/zajawka_pomocnik.png"/></div>
-        <ul>
-            <li id="zajawka_li1">Postanowiłeś kupić nowy sprzęt RTV i AGD?</li>
-            <li id="zajawka_li2">Twój osobisty Pomocnik Zakupowy chętnie Ci w tym pomoże.</li>
-            <li id="zajawka_li3">Przeszuka za Ciebie wszystkie dostępne oferty i znajdzie najniższe ceny wraz z opiniami osób takich jak Ty!</li>
-        </ul>
-    </div>
+<!-- FZ7NI-5 ZAJAWKA-->
+    <section class="container slogan">
 
-    <div id="link_formularz" >
-        <a href="#">
-            <img src="img/Link_form.png"/>
-        </a>
-    </div>
 
+        <div class="row">
+            <div class="col">
+            <h1>ZRÓBMY WSPÓLNIE KOLEJNY KROK</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div id="logo_zaj"><img src="img/pomocnik.png"/> </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <ul>
+                    <li class="zajawka_li1">Postanowiłeś kupić nowy sprzęt RTV i AGD?</li>
+                    <li class="zajawka_li2">Twój osobisty Pomocnik Zakupowy chętnie Ci w tym pomoże.</li>
+                    <li class="zajawka_li3">Przeszuka za Ciebie wszystkie dostępne oferty i znajdzie najniższe ceny wraz z opiniami osób takich jak Ty!</li>
+                </ul>
+            </div>
+        </div>
+
+
+    <div id="link_formularz" class="container-fluid text-center">
+        <a href="#" class="col-4 btn btn-outline-secondary btn-lg" role="button" aria-pressed="true">Zapisz się na premierę!</a>
+    </div>
+    </section>
 
 </header>
 
@@ -71,111 +92,167 @@
 <!-- FZ7NI-6 SPIS PLANOWANYCH FUNKCJI-->
 
 <div class="features-pics" align="center" id="features">
-    <div class="features">
-        <i class="fa fa-tags fa-4x"></i>
-        <p class="features-p">Wyszukiwarka najlepszej oferty</p>
-    </div>
+    <h2 class="feat-describe">Najważniejsze funkcje aplikacji</h2>
+    <div class="container row">
+        <div class="feat col-sm-6 col-md-3">
+            <i class="fa  fa-tags fa-4x"></i>
+            <p class="features-p">Wyszukiwarka najlepszej oferty</p>
+        </div>
 
-    <div class="features">
-        <i class="fa fa-barcode fa-4x"></i>
-        <p class="features-p">Skaner produktów</p>
-    </div>
+        <div class="feat col-sm-6 col-md-3">
+            <i class="fa fa-barcode fa-4x"></i>
+            <p class="features-p">Skaner produktów</p>
+        </div>
 
-    <div class="features">
-        <i class="fa fa-users fa-4x"></i>
-        <p class="features-p">Opinie użytkowników</p>
-    </div>
+        <div class="feat col-sm-6 col-md-3">
+            <i class="fa fa-users fa-4x"></i>
+            <p class="features-p">Opinie użytkowników</p>
+        </div>
 
-    <div class="features">
-        <i class="fa fa-mobile fa-4x"></i>
-        <p class="features-p">Dostęp z każdego urządzenia</p>
+        <div class="feat col-sm-6 col-md-3">
+            <i class="fa fa-mobile fa-4x"></i>
+            <p class="features-p">Dostęp z każdego urządzenia</p>
+        </div>
     </div>
 </div>
 
 <!-- FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI-->
 
+<!-- FZ7NI-7 sign-in section -->
 
-<!-- FZ7NI-12 dodatkowe info o produkcie-->
-    <div class="info" id="info">
-        <div class="row-info">
-            <div class="column">
-                <div>
-                    <img class="img center" src="img/functionality-mutliple-devices.jpg" alt="Obrazek 1">
-                    <h3 class="imgTitle">Dostęp z każdego urządzenia</h3>
-                    <p class="imgText">Pomocnik Zakupowy jest dostępny na różnych urządzeniach</p>
-                </div>
-                <div>
-                    <img class="img center" src="img/functionality-scanner.png" alt="Obrazek 2">
-                    <h3 class="imgTitle">Skaner produktów</h3>
-                    <p class="imgText">Pomocnik Zakupowy jest wyposażony w skaner kodów kreskowych</p>
-                </div>
-                <div>
-                    <img class="img center" src="img/functionality-opinion.jpg" alt="Obrazek 3">
-                    <h3 class="imgTitle">Opinie użytkowników</h3>
-                    <p class="imgText">Pomocnik Zakupowy ma możliwość dodania opinii o produkcie</p>
-                </div>
-                <div>
-                    <img class="img center" src="img/functionality-best-deal.jpg" alt="Obrazek 4">
-                    <h3 class="imgTitle">Wyszukiwarka najlepszej oferty</h3>
-                    <p class="imgText">Pomocnik Zakupowy ma wyszukiwanie według ceny, opinii użytkowników, etc.</p>
-                </div>
-            </div>
-            <div class="column">
-                <div>
-                    <img class="img center" src="img/functionality-simplicity.jpg" alt="Obrazek 5">
-                    <h3 class="imgTitle">Prostota obsługi</h3>
-                    <p class="imgText">Pomocnik Zakupowy jest prosty i intuicyjny w obsłudze</p>
-                </div>
-                <div>
-                    <img class="img center" src="img/functionality-best-price.jpg" alt="Obrazek 6">
-                    <h3 class="imgTitle">Porównywarka cenowa</h3>
-                    <p class="imgText">Pomocnik Zakupowy wyszukuje oferty różnych sklepów</p>
-                </div>
-                <div>
-                    <img class="img center" src="img/functionality-alternative.jpg" alt="Obrazek 7">
-                    <h3 class="imgTitle">Alternatywy</h3>
-                    <p class="imgText">Pomocnik Zakupowy podpowiada alternatywne produkty</p>
-                </div>
-                <div>
-                    <img class="img center" src="img/functionality-others.jpg" alt="Obrazek 8">
-                    <h3 class="imgTitle">"Inni klienci kupili również:"</h3>
-                    <p class="imgText">Pomocnik Zakupowy podpowiada czym byli zainteresowani inni klienci</p>
-                </div>
-            </div>
-        </div>
-</div>
+<section id="sign-in">
+    <div class="container text-center d-flex align-items-center justify-content-center">
 
-<!--sign-in section-->
+        <div class="content">
 
-<section id="sign-in d">
-    <div class="content d-flex flex-column justify-content-center">
+            <p class="lead mb-3">Chcesz pierwszy dowiedzieć się o starcie Pomocnika zakupowego?</p>
+            <p class="mb-4">Obecnie pracujemy nad jego uczończeniem. Powiadomimy Cię, jak tylko będzie gotowy &ndash; zostaw nam swój adres e-mail.</p>
 
-        <p>Jeśli chcesz pierwszy dowiedzieć się o starcie Pomodnika zakupowego, to zapisz się na powiadomienie!</p>
+            <form>
 
-        <form>
-            <div class="form-row align-items-center">
-                <div class="col-auto">
-                    <label class="sr-only" for="inlineFormInput">Imię</label>
-                    <input type="text" class="form-control mb-2 mb-sm-0" id="inlineFormInput" placeholder="Imię">
-                </div>
-                <div class="col-auto">
-                    <label class="sr-only" for="inlineFormInputGroup">Username</label>
-                    <div class="input-group mb-2 mb-sm-0">
-                        <div class="input-group-addon">@</div>
-                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                <div class="form-group row justify-content-center">
+
+                    <div class="col-md-5">
+
+                        <label class="sr-only" for="name">Twoje imię:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Twoje imię">
+
                     </div>
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope"></i> Zpisz się!</button>
-                </div>
-            </div>
-        </form>
 
-        <p>Obiecujemy wysłać tylko jedną wiadomość z informacją o premierze naszej aplikacji.</p>
+                    <div class="col-md-5">
 
+                        <label class="sr-only" for="email">Twój e-mail"</label>
+                        <input type="email" class="form-control" id="email" placeholder="Twój e-mail">
+
+                    </div>
+
+                    <div class="col-md-10 col-lg-2">
+
+                        <button type="submit" class="btn btn-block btn-dark"><span class="fa fa-envelope"></span> Zapisz się!</button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+            <p>Obiecujemy wysłać tylko jedną wiadomość z informacją o premierze naszej aplikacji.</p>
+
+        </div>
     </div>
 </section>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!-- FZ7NI-7 end of sign-in section -->
+
+<!-- FZ7NI-12 dodatkowe info o produkcie-->
+<div class="features-pics container bg-3" align="center" id="product-info">
+    <h1 class="feat-describe">Dodatkowe informacje o produkcie</h1>
+    <div class="row">
+        <div class="column col-md-3 col-sm-6">
+            <div class="features feat-padding" align="center">
+                <i class="fa fa-tags fa-4x"></i>
+                <h3 class="features-p">Wyszukiwarka najlepszej oferty</h3>
+                <p class="imgText">Pomocnik Zakupowy ma wyszukiwanie według ceny, opinii użytkowników, etc.</p>
+            </div>
+            <div class="features feat-padding" align="center">
+                <i class="fa fa-barcode fa-4x"></i>
+                <h3 class="features-p">Skaner produktów</h3>
+                <p class="imgText">Pomocnik Zakupowy jest wyposażony w skaner kodów kreskowych</p>
+            </div></div>
+        <div class="column col-md-3 col-sm-6">
+            <div class="features feat-padding" align="center">
+                <i class="fa fa-users fa-4x"></i>
+                <h3 class="features-p">Opinie użytkowników</h3>
+                <p class="imgText">Pomocnik Zakupowy ma możliwość dodania opinii o produkcie</p>
+            </div>
+            <div class="features feat-padding" align="center">
+                <i class="fa fa-mobile fa-4x"></i>
+                <h3 class="features-p">Dostęp z każdego urządzenia</h3>
+                <p class="imgText">Pomocnik Zakupowy jest dostępny na różnych urządzeniach</p>
+            </div>
+        </div>
+        <div class="column col-md-3 col-sm-6">
+            <div class="features feat-padding" align="center">
+                <i class="fa fa-simplybuilt fa-4x"></i>
+                <h3 class="features-p">Prostota obsługi</h3>
+                <p class="imgText">Pomocnik Zakupowy jest prosty i intuicyjny w obsłudze</p>
+            </div>
+            <div class="features feat-padding" align="center">
+                <i class="fa fa-compass fa-4x"></i>
+                <h3 class="features-p">Porównywarka cenowa</h3>
+                <p class="imgText">Pomocnik Zakupowy wyszukuje oferty różnych sklepów</p>
+            </div></div>
+        <div class="column col-md-3 col-sm-6">
+            <div class="features feat-padding" align="center">
+                <i class="fa fa-list-alt fa-4x"></i>
+                <h3 class="features-p">Alternatywy</h3>
+                <p class="imgText">Pomocnik Zakupowy podpowiada alternatywne produkty</p>
+            </div>
+            <div class="features feat-padding" align="center">
+                <i class="fa fa-user-circle-o fa-4x"></i>
+                <h3 class="features-p">"Inni klienci kupili również"</h3>
+                <p class="imgText">Pomocnik Zakupowy podpowiada czym byli zainteresowani inni klienci</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FZ7NI-9 INFORMACJE O ZESPOLE -->
+
+<div id="team-info" align="center" class="team">
+    <h2 class="team-describe">Informacje o Zespole</h2>
+    <div class="container row">
+        <div class="member-box col-sm-6 col-md-3">
+            <img src="img/member1.png" class="rounded-circle" height="170" alt="Marcin">
+            <p class="team-member">Marcin Płużyński</p>
+            <p class="member-page"><a href="#">Strona o mnie</a></p>
+            <p class="fa fa-linkedin"><a href="#">LinkedIn</a></p>
+        </div>
+        <div class="member-box col-sm-6 col-md-3">
+            <img src="img/member2.png" class="rounded-circle" height="170" alt="Mateusz">
+            <p class="team-member">Mateusz Gorczyca</p>
+            <p class="member-page"><a href="#">Strona o mnie</a></p>
+            <p class="fa fa-linkedin"><a href="#">LinkedIn</a></p>
+        </div>
+        <div class="member-box col-sm-6 col-md-3">
+            <img src="img/member3.png" class="rounded-circle" height="170" alt="Mateusz">
+            <p class="team-member">Dominik Manowski</p>
+            <p class="member-page"><a href="#">Strona o mnie</a></p>
+            <p class="fa fa-linkedin"><a href="#">LinkedIn</a></p>
+        </div>
+        <div class="member-box col-sm-6 col-md-3">
+            <img src="img/member4.png" class="rounded-circle" height="170" alt="Rafał">
+            <p class="team-member">Rafał Dombrowski</p>
+            <p class="member-page"><a href="#">Strona o mnie</a></p>
+            <p class="fa fa-linkedin"><a href="#">LinkedIn</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- FZ7NI-9 KONIEC INFORMACJE O ZESPOLE -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="js/smoothScroll.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
