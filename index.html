@@ -85,10 +85,9 @@
         </div>
 
 
-        <div id="link_formularz" class="container-fluid text-center">
-            <a href="#" class="col-4 btn btn-outline-secondary btn-lg" role="button" aria-pressed="true">Zapisz się na
-                premierę!</a>
-        </div>
+    <div id="link_formularz" class="container-fluid text-center">
+        <a href="#sign-in" class="col-4 btn btn-outline-secondary btn-lg guzik" role="button" aria-pressed="true">Zapisz się na premierę!</a>
+    </div>
     </section>
 
 </header>
@@ -136,27 +135,28 @@
             <p class="mb-4">Obecnie pracujemy nad jego uczończeniem. Powiadomimy Cię, jak tylko będzie gotowy &ndash;
                 zostaw nam swój adres e-mail.</p>
 
-            <form>
+            <form action="https://formspree.io/pomocnikzakupowy.ncit@gmail.com" method="POST">
 
                 <div class="form-group row justify-content-center">
 
                     <div class="col-md-5 mb-4">
 
                         <label class="sr-only" for="name">Twoje imię:</label>
-                        <input type="text" class="form-control" id="name" placeholder="Twoje imię">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Twoje imię">
 
                     </div>
 
                     <div class="col-md-5 mb-4">
 
                         <label class="sr-only" for="email">Twój e-mail"</label>
-                        <input type="email" class="form-control" id="email" placeholder="Twój e-mail">
+                        <input type="email" class="form-control" id="email" name="e-mail" placeholder="Twój e-mail">
+
 
                     </div>
 
                     <div class="col-md-10 col-lg-2">
 
-                        <button type="submit" class="btn btn-block btn-dark"><span class="fa fa-envelope"></span> Zapisz
+                        <button type="submit" value="Send" class="btn btn-block btn-dark"><span class="fa fa-envelope"></span> Zapisz
                             się!
                         </button>
 
@@ -219,7 +219,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- FZ7NI-9 INFORMACJE O ZESPOLE -->
 
