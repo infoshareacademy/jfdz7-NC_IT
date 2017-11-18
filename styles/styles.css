@@ -100,6 +100,11 @@ header {
 
 }
 
+.hasla {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 .slogan h1 {
     font-size: 5vw;
     white-space:nowrap;
@@ -148,6 +153,15 @@ header {
     background-color: rgba(0,0,0,0.9);;
 }
 
+.btn-group-lg>.btn, .btn-lg {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.guzik {
+    margin-bottom: 10px;
+}
+
 /* RESPONSYWNOŚĆ ZAJAWKI @MEDIA */
 
 @media screen and (max-width: 730px) {
@@ -159,11 +173,11 @@ header {
     }
 
     .zajawka_li2 {
-        text-indent: 0px;
+        text-indent: 5px;
     }
 
     .zajawka_li3 {
-        text-indent: 0px;
+        text-indent: 10px;
     }
 }
 
