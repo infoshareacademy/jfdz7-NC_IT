@@ -175,17 +175,26 @@ header {
 .bg-3 {
     background-color: white;
 }
-
-.features-pics .feat-padding {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-.features {
+.feat-header {
+    color: #893E16;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    padding-top: 80px;
+    padding-bottom: 60px;
     display: inline-block;
-    color: #000000;
-    padding: 5px;
 }
+.feat-title {
+    text-transform: uppercase;
+    min-height: 50px;
+    padding-top: 7px;
+
+}
+.feat-text {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
 /* FZ7NI-12 wiecej info - KONIEC */
 /*FZ7NI-6 SPIS PLANOWANYCH FUNKCJI*/
 
