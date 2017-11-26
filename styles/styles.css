@@ -120,6 +120,11 @@ header {
     width: 50vw;
 }
 
+.zajawka_lista {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .slogan ul {
     list-style: none;
     background-color: rgba(0,0,0,0.4);
@@ -152,12 +157,6 @@ header {
 #link_formularz a:hover {
     background-color: rgba(0,0,0,0.9);;
 }
-
-.btn-group-lg>.btn, .btn-lg {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .guzik {
     margin-bottom: 10px;
 }
@@ -166,18 +165,21 @@ header {
 
 @media screen and (max-width: 730px) {
     .slogan li {
-        margin-left: 2%;
-        text-align: left;
-        font-size: 2.5vw;
-        line-height: 15px;
+        margin-left: 0;
+        text-align: center;
+        font-size: 0.8rem;
+        line-height: 30px;
     }
 
     .zajawka_li2 {
-        text-indent: 5px;
+        text-indent: 0;
     }
 
     .zajawka_li3 {
-        text-indent: 10px;
+        text-indent: 0;
+    }
+    #link_formularz a {
+        font-size: 1rem;
     }
 }
 
