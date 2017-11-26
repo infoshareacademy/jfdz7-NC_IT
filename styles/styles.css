@@ -225,7 +225,6 @@ header {
 
 .features-pics {
     min-height: 400px;
-    padding-top: 80px;
 }
 
 #features .features-p {
@@ -239,6 +238,7 @@ header {
     letter-spacing: 5px;
     font-weight: bold;
     padding-bottom: 60px;
+    padding-top: 60px;
 }
 
 @media screen and (max-width: 575px) {
