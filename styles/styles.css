@@ -134,7 +134,7 @@ header {
 .slogan li {
     margin-left: 5%;
     text-align: left;
-    font-size: 1.7vw;
+    font-size: 1.2em;
     line-height: 30px;
 }
 
@@ -167,7 +167,6 @@ header {
     .slogan li {
         margin-left: 0;
         text-align: center;
-        font-size: 0.8rem;
         line-height: 30px;
     }
 
