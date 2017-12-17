@@ -17,7 +17,7 @@ $(document).ready(function() {
         }
 
         $('body, html').animate({
-            scrollTop: $(this.hash).offset().top
+            scrollTop: $(this.hash).offset().top - 30
         }, 800);
     }
     $navLinks.on('click', scrollToSection);
