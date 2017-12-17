@@ -120,11 +120,6 @@ header {
     width: 50vw;
 }
 
-.zajawka_lista {
-    padding-right: 0;
-    padding-left: 0;
-}
-
 .slogan ul {
     list-style: none;
     background-color: rgba(0,0,0,0.4);
@@ -157,6 +152,12 @@ header {
 #link_formularz a:hover {
     background-color: rgba(0,0,0,0.9);;
 }
+
+.btn-group-lg>.btn, .btn-lg {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .guzik {
     margin-bottom: 10px;
 }
@@ -165,21 +166,18 @@ header {
 
 @media screen and (max-width: 730px) {
     .slogan li {
-        margin-left: 0;
-        text-align: center;
-        font-size: 0.8rem;
-        line-height: 30px;
+        margin-left: 2%;
+        text-align: left;
+        font-size: 2.5vw;
+        line-height: 15px;
     }
 
     .zajawka_li2 {
-        text-indent: 0;
+        text-indent: 5px;
     }
 
     .zajawka_li3 {
-        text-indent: 0;
-    }
-    #link_formularz a {
-        font-size: 1rem;
+        text-indent: 10px;
     }
 }
 
@@ -196,7 +194,7 @@ header {
     font-size: 30px;
     letter-spacing: 5px;
     font-weight: bold;
-    padding-top: 60px;
+    padding-top: 80px;
     padding-bottom: 60px;
     display: inline-block;
 }
@@ -220,16 +218,17 @@ header {
 #features .feat {
     display: inline-block;
     color: #000000;
-    padding: 5px;
+    /*padding: 5px;*/
 }
 
 .features-pics {
-    min-height: 400px;
+    /*min-height: 400px;*/
+    /*padding-top: 80px;*/
 }
 
 #features .features-p {
     text-transform: uppercase;
-    padding: 7px;
+    /*padding: 7px;*/
 }
 
 #features .feat-describe {
@@ -237,15 +236,14 @@ header {
     font-size: 30px;
     letter-spacing: 5px;
     font-weight: bold;
-    padding-bottom: 60px;
-    padding-top: 60px;
+    /*padding-bottom: 60px;*/
 }
 
-@media screen and (max-width: 575px) {
+/*@media screen and (max-width: 575px) {
     .features-pics {
         padding: 5px;
     }
-}
+}*/
 
 /*FZ7NI-6 KONIEC SPIS PLANOWANYCH FUNKCJI*/
 
