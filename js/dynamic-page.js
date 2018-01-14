@@ -1,8 +1,8 @@
-var $fadeElements = $('.feat'); //.feat na fade zamienić w html i css
+var $fadeElements1 = $('.feat');
 
-$fadeElements.hide();
+$fadeElements1.hide();
 
-$.fn.isOnScreen = function() {
+$.fn.isOnScreen = function () {
 
     var $window = $(window);
 
@@ -22,12 +22,16 @@ $.fn.isOnScreen = function() {
 };
 
 $(window).scroll(function() {
-    if ($fadeElements.isOnScreen()) {
-        $fadeElements.fadeIn(2000);
+    if ($fadeElements1.isOnScreen()) {
+        $fadeElements1.fadeIn(3000);
     }
 });
 
+var $fadeElements2 = $('.member-box');
+$fadeElements2.hide();
 
-
-
-
+$(window).scroll(function() {
+    if ($fadeElements2.isOnScreen()) {
+        $fadeElements2.fadeIn(3000);
+    }
+});
