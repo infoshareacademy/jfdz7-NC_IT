@@ -4,6 +4,7 @@ $(document).ready(function() {
     var $navLinks = $('.scroll');
     var $navbar = $('#navbarSupportedContent');
     var $navbarBtn = $('.navbar-toggler');
+    var $nav = $('.navbar');
 
     function scrollToSection(event) {
         event.preventDefault();
@@ -21,5 +22,15 @@ $(document).ready(function() {
         }, 800);
     }
     $navLinks.on('click', scrollToSection);
+
+    function handleNavbarEffect() {
+        const effectThreschold = 80;
+
+        $(window).scrollTop() > effectThreschold ?
+            $nav.addClass('navbar-effect') :
+            $nav.removeClass('navbar-effect');
+    }
+
+    $(window).on('scroll', handleNavbarEffect);
 
 });

@@ -258,6 +258,21 @@ header {
     margin-right: 0.7em;
 }
 
+
+@media screen and (min-width: 768px) {
+
+    .navbar {
+        height: 60px;
+        transition: 200ms linear;
+        font-size: 1.2em;
+    }
+
+    .navbar-effect {
+        height: 50px;
+        font-size: 1em;
+    }
+}
+
 /* FZ7NI-8 end of navbar*/
 
 /* FZ7NI-7 sign-in section*/
