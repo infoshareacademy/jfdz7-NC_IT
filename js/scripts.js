@@ -53,4 +53,14 @@ $(document).ready(function() {
     }
 
     $(window).on('scroll', dynamicChangeTitle);
+
+    function showUpButton() {
+        const $window = $(window).scrollTop();
+        $window > 400 ?
+            $('.button_up').fadeIn() :
+            $('.button_up').fadeOut();
+        }
+
+    $(window).on('scroll', showUpButton);
+
 });
