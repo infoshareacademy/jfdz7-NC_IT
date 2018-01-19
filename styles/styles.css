@@ -250,6 +250,15 @@ header {
 
 /* FZ7NI-8 navbar*/
 
+.logo {
+    height: 2em;
+    transition: 200ms linear;
+}
+
+.logo-sm {
+    height: 1.7em;
+}
+
 .navbar .navbar-brand {
     margin-left: 0.7em;
 }
