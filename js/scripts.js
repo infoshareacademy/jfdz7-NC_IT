@@ -5,6 +5,7 @@ $(document).ready(function() {
     var $navbar = $('#navbarSupportedContent');
     var $navbarBtn = $('.navbar-toggler');
     var $nav = $('.navbar');
+    var $logo = $('.logo');
 
     function scrollToSection(event) {
         event.preventDefault();
@@ -27,8 +28,10 @@ $(document).ready(function() {
         const effectThreschold = 80;
 
         $(window).scrollTop() > effectThreschold ?
-            $nav.addClass('navbar-effect') :
-            $nav.removeClass('navbar-effect');
+            $nav.addClass('navbar-effect') &&
+            $logo.addClass('logo-sm'):
+            $nav.removeClass('navbar-effect') &&
+            $logo.removeClass('logo-sm');
     }
 
     $(window).on('scroll', handleNavbarEffect);
