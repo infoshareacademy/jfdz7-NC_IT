@@ -37,3 +37,4 @@ $(document).ready(function() {
     $(window).on('scroll', handleNavbarEffect);
 
 });
+
