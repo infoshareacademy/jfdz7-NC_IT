@@ -34,22 +34,7 @@ $(document).ready(function() {
     $(window).on('scroll', handleNavbarEffect);
 
     function dynamicChangeTitle() {
-        const $window = $(window).scrollTop();
-        if ($window <= 530) {
-            document.title='Pomocnik Zakupowy';
-        }
-        if ($window > 530 && $window <= 1000){
-            document.title='Najważniejsze Funkcje';
-        }
-        if ($window > 1000 && $window <= 1500){
-            document.title='Zapisz się !';
-        }
-        if ($window > 1500){
-            document.title='Dodatkowe Informacje';
-        }
-        if ($window === $(document).height() - $(window).height()) {
-            document.title='O nas'
-        }
+        document.title = $('.active').text();
     }
 
     $(window).on('scroll', dynamicChangeTitle);
@@ -62,5 +47,9 @@ $(document).ready(function() {
         }
 
     $(window).on('scroll', showUpButton);
+
+    $('.goTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 800);
+    });
 
 });
