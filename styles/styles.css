@@ -345,3 +345,13 @@ header {
     margin-top: 25px;
 }
 /*FZ7NI-9 KONIEC INFORMACJE O ZESPOLE*/
+.button_up {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.5;
+}
+
+.button_up a {
+    color: black;
+}
