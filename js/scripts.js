@@ -1,6 +1,5 @@
-//https://www.youtube.com/watch?v=x0YnVwAuNQI
-
 $(document).ready(function() {
+    AOS.init();
     var $navLinks = $('.scroll');
     var $navbar = $('#navbarSupportedContent');
     var $navbarBtn = $('.navbar-toggler');
