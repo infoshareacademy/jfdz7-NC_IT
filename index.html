@@ -150,20 +150,42 @@
                         <input type="email" class="form-control" id="email" name="e-mail" placeholder="Twój e-mail" required>
 
 
-
                     </div>
 
                     <div class="col-md-10 col-lg-2">
 
-                        <button type="submit" value="Send" class="btn btn-block btn-dark" data-aos="fade-up" data-aos-duration="1000"><span class="fa fa-envelope"></span> Zapisz
+                        <button type="button" value="Send" id="send" class="btn btn-block btn-dark" data-aos="fade-up" data-aos-duration="1000" disabled  data-toggle="modal" data-target="#exampleModalCenter"><span class="fa fa-envelope"></span> Zapisz
                             się!
                         </button>
 
                     </div>
 
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Nie jestem robotem</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                                    <button type="submit" class="btn btn-primary">Wyślij</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
             </form>
+
+
 
             <p>Obiecujemy wysłać tylko jedną wiadomość z informacją o premierze naszej aplikacji, a Twoje dane będą u nas bezpieczne.</p>
         </div>

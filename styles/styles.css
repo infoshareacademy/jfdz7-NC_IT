@@ -304,6 +304,15 @@ header {
     font-family: sans-serif;
 }
 
+#send:disabled {
+    opacity: .5;
+}
+
+.modal-dialog {
+    top: 30%;
+    transform: translate(0, -50%)
+}
+
 /* FZ7NI-7 end of sign-in section*/
 
 /*FZ7NI-9 INFORMACJE O ZESPOLE*/
