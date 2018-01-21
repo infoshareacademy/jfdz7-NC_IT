@@ -5,6 +5,8 @@ $(document).ready(function() {
     var $navbarBtn = $('.navbar-toggler');
     var $nav = $('.navbar');
     var $logo = $('.logo');
+    var $email = $('#email');
+    var $formSubmitButton = $('#send');
 
     function scrollToSection(event) {
         event.preventDefault();
@@ -53,5 +55,19 @@ $(document).ready(function() {
     $('.goTop').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 800);
     });
+
+
+    function isMailInputNotEmpty() {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return $email.val() === regex
+    }
+
+    function validateSubmitButton() {
+        $formSubmitButton.prop('disabled', isMailInputNotEmpty());
+    }
+
+    $email.on('input', validateSubmitButton);
+
+
 
 });
