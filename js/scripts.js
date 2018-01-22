@@ -56,14 +56,13 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: 0 }, 800);
     });
 
-
-    function isMailInputNotEmpty() {
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        return $email.val() === regex
+    function isEmailValid() {
+        var emailRegex = /^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        return emailRegex.test($email.val());
     }
 
     function validateSubmitButton() {
-        $formSubmitButton.prop('disabled', isMailInputNotEmpty());
+        $formSubmitButton.prop('disabled', !isEmailValid());
     }
 
     $email.on('input', validateSubmitButton);
