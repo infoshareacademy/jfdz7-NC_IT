@@ -43,16 +43,17 @@ $(document).ready(function() {
 
     $(window).on('scroll', dynamicChangeTitle);
 
+    var $goTop = $('.goTop');
     function showUpButton() {
         const $window = $(window).scrollTop();
         $window > 400 ?
-            $('.button_up').fadeIn() :
-            $('.button_up').fadeOut();
+            $goTop.fadeIn() :
+            $goTop.fadeOut();
         }
 
     $(window).on('scroll', showUpButton);
 
-    $('.goTop').click(function(){
+    $goTop.click(function(){
         $("html, body").animate({ scrollTop: 0 }, 800);
     });
 
