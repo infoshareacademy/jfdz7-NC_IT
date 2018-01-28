@@ -7,6 +7,9 @@ $(document).ready(function() {
     var $logo = $('.logo');
     var $email = $('#email');
     var $formSubmitButton = $('#send');
+    const $emailSubmit = $('.email-submit');
+    const $pinInput = $('.pin-input');
+    const pin = Math.round(Math.random() * 10000);
 
     function scrollToSection(event) {
         event.preventDefault();
@@ -67,7 +70,16 @@ $(document).ready(function() {
 
     $email.on('input', validateSubmitButton);
 
+    $('<span class="is-human-pin"></span>').appendTo('.is-human');
+    $('.is-human-pin').text(`${pin}`);
 
-
-
+    function isPinInvalid() {
+        let input = $pinInput.val();
+        return parseInt(input) !== pin;
+    }
+    function validateSubmitBtn() {
+        // isPinInvalid ? $emailSubmit.attr('disabled', '') : $emailSubmit.removeAttr('disabled') ;
+        $emailSubmit.prop('disabled', isPinInvalid)
+    }
+    $pinInput.on('keyup', validateSubmitBtn);
 });
