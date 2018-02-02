@@ -1,11 +1,11 @@
 var game = new Phaser.Game(800, 700, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
 function preload() {
-    game.load.image('bground', 'assets/bground.jpg');
-    game.load.image('groundCenter', 'assets/Tiles/grassHalfMid.png');
-    game.load.image('groundRight', 'assets/Tiles/grassHalfRight.png');
-    game.load.image('groundLeft', 'assets/Tiles/grassHalfLeft.png');
-    game.load.spritesheet('dude', 'assets/spritesheet.png', 34, 50, 11);
+    game.load.image('bground', 'materialy/bground.jpg');
+    game.load.image('groundCenter', 'materialy/Tiles/grassHalfMid.png');
+    game.load.image('groundRight', 'materialy/Tiles/grassHalfRight.png');
+    game.load.image('groundLeft', 'materialy/Tiles/grassHalfLeft.png');
+    game.load.spritesheet('dude', 'materialy/spritesheet.png', 34, 50, 11);
 
 }
 
