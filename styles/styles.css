@@ -304,6 +304,18 @@ header {
     font-family: sans-serif;
 }
 
+#send:disabled {
+    opacity: .5;
+}
+
+.modal-dialog {
+    top: 30%;
+    transform: translate(0, -50%)
+}
+.modal-content {
+    color: black;
+}
+
 /* FZ7NI-7 end of sign-in section*/
 
 /*FZ7NI-9 INFORMACJE O ZESPOLE*/
@@ -345,3 +357,13 @@ header {
     margin-top: 25px;
 }
 /*FZ7NI-9 KONIEC INFORMACJE O ZESPOLE*/
+.button_up {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.5;
+}
+
+.button_up a {
+    color: black;
+}
