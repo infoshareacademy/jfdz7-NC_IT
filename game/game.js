@@ -6,7 +6,7 @@ function preload() {
     game.load.image('groundCenterFat', 'assets/tiles/grassMid.png');
     game.load.image('groundRight', 'assets/tiles/grassHalfRight.png');
     game.load.image('groundLeft', 'assets/tiles/grassHalfLeft.png');
-    game.load.spritesheet('dude', 'assets/player/spritesheet.png', 34, 50, 11);
+    game.load.spritesheet('dude', 'assets/player/spritesheet.png', 30, 50, 16);
 
 }
 
@@ -59,8 +59,9 @@ function create() {
     player.body.bounce.y = 0.2;
     player.body.gravity.y = 400;
     player.body.collideWorldBounds = true;
-    player.animations.add('left', [0, 1, 2, 3], 0, true);
-    player.animations.add('right', [5, 6, 7, 8], 0, true);
+    player.animations.add('left', [8, 9, 10, 11, 12, 13], 17, true);
+    player.animations.add('right', [2, 3, 4, 5, 6, 7], 17, true);
+    player.animations.add('stop', [14, 15], 2, true);
     cursors = game.input.keyboard.createCursorKeys();
 
 
@@ -89,9 +90,7 @@ function update() {
     else
     {
         //  Stand still
-        player.animations.stop();
-
-        player.frame = 4;
+        player.animations.play('stop');
     }
 
     if (cursors.up.isDown && player.body.touching.down)
