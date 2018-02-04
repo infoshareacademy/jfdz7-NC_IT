@@ -2,10 +2,11 @@ var game = new Phaser.Game(800, 700, Phaser.AUTO, '', { preload: preload, create
 
 function preload() {
     game.load.image('bground', 'assets/bground.jpg');
-    game.load.image('groundCenter', 'assets/grassHalfMid.png');
-    game.load.image('groundRight', 'assets/grassHalfRight.png');
-    game.load.image('groundLeft', 'assets/grassHalfLeft.png');
-    game.load.spritesheet('dude', 'assets/spritesheet.png', 34, 50, 11);
+    game.load.image('groundCenter', 'assets/tiles/grassHalfMid.png');
+    game.load.image('groundCenterFat', 'assets/tiles/grassMid.png');
+    game.load.image('groundRight', 'assets/tiles/grassHalfRight.png');
+    game.load.image('groundLeft', 'assets/tiles/grassHalfLeft.png');
+    game.load.spritesheet('dude', 'assets/player/spritesheet.png', 34, 50, 11);
 
 }
 
@@ -23,7 +24,7 @@ function create() {
 
    function createGround() {
         for (var i = 0; i <= 800; i += 70) {
-            var ground = platforms.create(i, game.world.height - 124, 'groundCenter');
+            var ground = platforms.create(i, game.world.height - 124, 'groundCenterFat');
             ground.body.immovable = true;
         }
         return ground;
@@ -40,7 +41,7 @@ function create() {
        ledgeRight.body.immovable = true;
        ledgeLeft.body.immovable = true;
    }
-    createLedge(520,50,3);
+    createLedge(520,100,3);
     createLedge(0,100,4);
     createLedge(310,200,6);
     createLedge(0,300,4);
@@ -48,6 +49,7 @@ function create() {
     createLedge(200,400,4);
     createLedge(0,500,2);
     createLedge(520,500,3);
+    createLedge(300,500,1);
 
     player = game.add.sprite(300, game.world.height - 200, 'dude');
 
