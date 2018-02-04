@@ -56,12 +56,12 @@ function create() {
     game.physics.arcade.enable(player);
 
     //  Player physics properties. Give the little guy a slight bounce.
-    player.body.bounce.y = 0.2;
-    player.body.gravity.y = 400;
+    player.body.bounce.y = 0.1;
+    player.body.gravity.y = 700;
     player.body.collideWorldBounds = true;
     player.animations.add('left', [8, 9, 10, 11, 12, 13], 17, true);
     player.animations.add('right', [2, 3, 4, 5, 6, 7], 17, true);
-    player.animations.add('stop', [14, 15], 2, true);
+    player.animations.add('stop', [14, 15], 3, true);
     cursors = game.input.keyboard.createCursorKeys();
 
 
@@ -93,9 +93,32 @@ function update() {
         player.animations.play('stop');
     }
 
+    if (cursors.up.isDown && cursors.right.isDown && player.body.touching.down)
+    {
+        player.body.velocity.y = -400;
+        player.animations.stop();
+        player.frame = 0;
+    }
+    if (cursors.up.isDown && cursors.right.isDown)
+    {
+        player.animations.stop();
+        player.frame = 0;
+    }
+    if (cursors.up.isDown && cursors.left.isDown && player.body.touching.down)
+    {
+        player.body.velocity.y = -400;
+        player.animations.stop();
+        player.frame = 1;
+    }
+    if (cursors.up.isDown && cursors.left.isDown)
+    {
+        player.animations.stop();
+        player.frame = 1;
+    }
     if (cursors.up.isDown && player.body.touching.down)
     {
-        player.body.velocity.y = -950;
+        player.body.velocity.y = -400;
+        player.animations.stop();
+        player.frame = 0;
     }
-
 }
