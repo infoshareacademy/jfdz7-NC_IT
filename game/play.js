@@ -3,7 +3,6 @@ var playState = {
 
 create: function () {
 
-    game.physics.startSystem(Phaser.Physics.ARCADE);
     game.add.sprite(0, 0, 'bground');
 
     //  The platforms group contains the ground and the 2 ledges we can jump on
