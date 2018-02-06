@@ -56,11 +56,34 @@ create: function () {
     cursors = game.input.keyboard.createCursorKeys();
 
 
+    gems = game.add.group();
 
+    gems.enableBody = true;
+
+    for (var i = 0; i < 10; i++)
+    {
+        var gem = gems.create(i * 120, 0, 'gem');
+        var gem2 = gems.create(i * 150, 100, 'gem');
+        var gem3 = gems.create(i * 180, 250, 'gem');
+        var gem4 = gems.create(i * 200, 420, 'gem');
+
+        gem.body.gravity.y = 30;
+        gem2.body.gravity.y = 30;
+        gem3.body.gravity.y = 15;
+        gem4.body.gravity.y = 15;
+
+        gem.body.bounce.y = 0.6 + Math.random() * 0.3;
+    }
 
 },
  update: function() {
     var hitPlatform = game.physics.arcade.collide(player, platforms);
+    var gemHitPlatform = game.physics.arcade.collide(gems, platforms);
+    var playerKillGem = game.physics.arcade.overlap(player, gems, killGem, null, this);
+
+    function killGem (player, gem) {
+        gem.kill();
+    }
 
     player.body.velocity.x = 0;
 

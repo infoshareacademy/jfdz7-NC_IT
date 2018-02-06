@@ -6,6 +6,7 @@ var loadState = {
         game.load.image('groundCenterFat', 'assets/tiles/grassMid.png');
         game.load.image('groundRight', 'assets/tiles/grassHalfRight.png');
         game.load.image('groundLeft', 'assets/tiles/grassHalfLeft.png');
+        game.load.image('gem', 'assets/items/gemBlue.png');
         game.load.spritesheet('dude', 'assets/player/spritesheet.png', 30, 50, 16);
         game.load.image('bgMenu', 'assets/menu/bg_menu.png');
         game.load.image('bgMenuHigh_HowToPlay', 'assets/menu/bg_HighandHowToPlay.png');
