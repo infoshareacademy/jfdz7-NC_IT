@@ -10,6 +10,7 @@ var loadState = {
         game.load.image('cloud-1', 'assets/items/cloud-2.png');
         game.load.image('cloud-2', 'assets/items/cloud-1.png');
         game.load.spritesheet('dude', 'assets/player/spritesheet.png', 30, 50, 16);
+        game.load.spritesheet('enemy', 'assets/enemy/spritesheet.png', 83, 50, 12);
         game.load.image('bgMenu', 'assets/menu/bg_menu.png');
         game.load.image('bgMenuHigh_HowToPlay', 'assets/menu/bg_HighandHowToPlay.png');
         game.load.spritesheet('playButton', 'assets/menu/playButton.png', 110, 110);

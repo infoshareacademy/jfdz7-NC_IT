@@ -4,13 +4,12 @@ var playState = {
 
         game.add.sprite(0, 0, 'bground');
 
-        //  The platforms group contains the ground and the 2 ledges we can jump on
+
         platforms = game.add.group();
 
         //  We will enable physics for any object that is created in this group
         platforms.enableBody = true;
 
-        // Here we create the ground.
 
         function createGround() {
             for (var i = 0; i <= 800; i += 70) {
@@ -45,6 +44,7 @@ var playState = {
 
         player = game.add.sprite(300, game.world.height - 200, 'dude');
 
+
         game.physics.arcade.enable(player);
 
         //  Player physics properties. Give the little guy a slight bounce.
@@ -55,6 +55,41 @@ var playState = {
         player.animations.add('right', [2, 3, 4, 5, 6, 7], 17, true);
         player.animations.add('stop', [14, 15], 3, true);
         cursors = game.input.keyboard.createCursorKeys();
+
+        // ENEMY
+        enemies = game.add.group();
+        enemies.enableBody = true;
+        game.physics.arcade.enable(enemies);
+        function createEnemy1(startX, startY) {
+            enemies = game.add.sprite(startX, startY, 'enemy', 1);
+            enemies.smoothed = false;
+            enemies.animations.add('center' , [6,5,4,3,2,1,7,9,10,11,12] , 15, true);
+            enemies.movementloop=game.add.tween(enemies).to({x:enemies.x-450},2200,"Linear",true,0,-1,true,enemies.animations.play('center'));
+            }
+        createEnemy1(700, 150);
+        function createEnemy2(startX, startY) {
+            enemies = game.add.sprite(startX, startY, 'enemy', 1);
+            enemies.smoothed = false;
+            enemies.animations.add('center' , [6,5,4,3,2,1,7,9,10,11,12] , 15, true);
+            enemies.movementloop=game.add.tween(enemies).to({x:enemies.x+300},2200,"Linear",true,0,-1,true,enemies.animations.play('center'));
+        }
+        createEnemy2(190, 350);
+        function createEnemy3(startX, startY) {
+            enemies = game.add.sprite(startX, startY, 'enemy', 1);
+            enemies.smoothed = false;
+            enemies.animations.add('center' , [6,5,4,3,2,1,7,9,10,11,12] , 15, true);
+            enemies.movementloop=game.add.tween(enemies).to({x:enemies.x+700},6000,"Linear",true,0,-1,true,enemies.animations.play('center'));
+        }
+        createEnemy3(0, 50);
+        function createEnemy4(startX, startY) {
+            enemies = game.add.sprite(startX, startY, 'enemy', 1);
+            enemies.smoothed = false;
+            enemies.animations.add('center' , [6,5,4,3,2,1,7,9,10,11,12] , 15, true);
+            enemies.movementloop=game.add.tween(enemies).to({x:enemies.x+150},4000,"Linear",true,0,-1,true,enemies.animations.play('center'));
+        }
+        createEnemy4(0, 450);
+
+        //
 
         var cloud1 = game.add.image(220, 46, 'cloud-1');
         cloud1.scale.set(.7);
@@ -86,6 +121,7 @@ var playState = {
         var hitPlatform = game.physics.arcade.collide(player, platforms);
         var gemHitPlatform = game.physics.arcade.collide(gems, platforms);
         var playerKillGem = game.physics.arcade.overlap(player, gems, killGem, null, this);
+        var hitEnemy = game.physics.arcade.collide(enemies, platforms, gems);
 
         function killGem(player, gem) {
             gem.kill();
@@ -133,5 +169,6 @@ var playState = {
             player.animations.stop();
             player.frame = 0;
         }
-    }
+    },
+
 };
