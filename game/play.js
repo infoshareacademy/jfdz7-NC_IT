@@ -57,39 +57,52 @@ var playState = {
         cursors = game.input.keyboard.createCursorKeys();
 
         // ENEMY
-        enemies = game.add.group();
-        enemies.enableBody = true;
-        game.physics.arcade.enable(enemies);
-        function createEnemy1(startX, startY) {
-            enemies = game.add.sprite(startX, startY, 'enemy', 1);
-            enemies.smoothed = false;
-            enemies.animations.add('center' , [6,5,4,3,2,1,7,9,10,11,12] , 15, true);
-            enemies.movementloop=game.add.tween(enemies).to({x:enemies.x-450},2200,"Linear",true,0,-1,true,enemies.animations.play('center'));
-            }
-        createEnemy1(700, 150);
-        function createEnemy2(startX, startY) {
-            enemies = game.add.sprite(startX, startY, 'enemy', 1);
-            enemies.smoothed = false;
-            enemies.animations.add('center' , [6,5,4,3,2,1,7,9,10,11,12] , 15, true);
-            enemies.movementloop=game.add.tween(enemies).to({x:enemies.x+300},2200,"Linear",true,0,-1,true,enemies.animations.play('center'));
-        }
-        createEnemy2(190, 350);
-        function createEnemy3(startX, startY) {
-            enemies = game.add.sprite(startX, startY, 'enemy', 1);
-            enemies.smoothed = false;
-            enemies.animations.add('center' , [6,5,4,3,2,1,7,9,10,11,12] , 15, true);
-            enemies.movementloop=game.add.tween(enemies).to({x:enemies.x+700},6000,"Linear",true,0,-1,true,enemies.animations.play('center'));
-        }
-        createEnemy3(0, 50);
-        function createEnemy4(startX, startY) {
-            enemies = game.add.sprite(startX, startY, 'enemy', 1);
-            enemies.smoothed = false;
-            enemies.animations.add('center' , [6,5,4,3,2,1,7,9,10,11,12] , 15, true);
-            enemies.movementloop=game.add.tween(enemies).to({x:enemies.x+150},4000,"Linear",true,0,-1,true,enemies.animations.play('center'));
-        }
-        createEnemy4(0, 450);
 
-        //
+            this.enemies = game.add.sprite(700, 150, 'enemy', 1);
+            this.enemies.smoothed = false;
+            this.enemies.animations.add('center', [6, 5, 4, 3, 2, 1, 7, 9, 10, 11, 12], 15, true);
+            this.enemies.movementloop = game.add.tween(this.enemies).to({x: this.enemies.x - 450}, 2200, "Linear", true, 0, -1, true, this.enemies.animations.play('center'));
+            game.physics.enable(this.enemies, Phaser.Physics.ARCADE);
+
+            enemies1 = game.add.sprite(190, 350, 'enemy', 1);
+            enemies1.smoothed = false;
+            enemies1.animations.add('center', [6, 5, 4, 3, 2, 1, 7, 9, 10, 11, 12], 15, true);
+            enemies1.movementloop = game.add.tween(enemies1).to({x: enemies1.x + 300}, 2200, "Linear", true, 0, -1, true, enemies1.animations.play('center'));
+            game.physics.enable(enemies1, Phaser.Physics.ARCADE);
+
+            enemies2 = game.add.sprite(0, 50, 'enemy', 1);
+            enemies2.smoothed = false;
+            enemies2.animations.add('center', [6, 5, 4, 3, 2, 1, 7, 9, 10, 11, 12], 15, true);
+            enemies2.movementloop = game.add.tween(enemies2).to({x: enemies2.x + 700}, 6000, "Linear", true, 0, -1, true, enemies2.animations.play('center'));
+            game.physics.enable(enemies2, Phaser.Physics.ARCADE);
+
+            enemies3 = game.add.sprite(0, 450, 'enemy', 1);
+            enemies3.smoothed = false;
+            enemies3.animations.add('center', [6, 5, 4, 3, 2, 1, 7, 9, 10, 11, 12], 15, true);
+            enemies3.movementloop = game.add.tween(enemies3).to({x: enemies3.x + 150}, 4000, "Linear", true, 0, -1, true, enemies3.animations.play('center'));
+            game.physics.enable(enemies3, Phaser.Physics.ARCADE);
+
+
+        /////////////////
+
+        ////////////////LIFE
+        this.livesCounter = 4;
+        this.lives = null;
+        this.lives = this.add.group();
+        var x = 150; // use your values
+        var y = 650;
+
+        for (var i = 0; i < 3; i++) {
+            var life = this.lives.create(
+                x - 100 + 80 * i,
+                y,
+                'heart'
+            );
+            life.anchor.setTo(0.5, 0.5);
+        }
+
+
+        ////////////////LIFE
 
         var cloud1 = game.add.image(220, 46, 'cloud-1');
         cloud1.scale.set(.7);
@@ -121,54 +134,84 @@ var playState = {
         var hitPlatform = game.physics.arcade.collide(player, platforms);
         var gemHitPlatform = game.physics.arcade.collide(gems, platforms);
         var playerKillGem = game.physics.arcade.overlap(player, gems, killGem, null, this);
-        var hitEnemy = game.physics.arcade.collide(enemies, platforms, gems);
+        game.physics.arcade.collide(player, this.enemies, lostLife,null, this);
+        game.physics.arcade.collide(player, enemies1, lostLife,null, this);
+        game.physics.arcade.collide(player, enemies2, lostLife,null, this);
+        game.physics.arcade.collide(player, enemies3, lostLife,null, this);
 
-        function killGem(player, gem) {
-            gem.kill();
-        }
 
-        player.body.velocity.x = 0;
 
-        if (cursors.left.isDown) {
-            //  Move to the left
-            player.body.velocity.x = -150;
 
-            player.animations.play('left');
-        }
-        else if (cursors.right.isDown) {
-            //  Move to the right
-            player.body.velocity.x = 150;
 
-            player.animations.play('right');
-        }
-        else {
-            //  Stand still
-            player.animations.play('stop');
-        }
+            function killGem(player, gem) {
+                gem.kill();
+            }
 
-        if (cursors.up.isDown && cursors.right.isDown && player.body.touching.down) {
-            player.body.velocity.y = -400;
-            player.animations.stop();
-            player.frame = 0;
-        }
-        if (cursors.up.isDown && cursors.right.isDown) {
-            player.animations.stop();
-            player.frame = 0;
-        }
-        if (cursors.up.isDown && cursors.left.isDown && player.body.touching.down) {
-            player.body.velocity.y = -400;
-            player.animations.stop();
-            player.frame = 1;
-        }
-        if (cursors.up.isDown && cursors.left.isDown) {
-            player.animations.stop();
-            player.frame = 1;
-        }
-        if (cursors.up.isDown && player.body.touching.down) {
-            player.body.velocity.y = -400;
-            player.animations.stop();
-            player.frame = 0;
-        }
-    },
 
+
+            function lostLife () {
+                live = this.lives.getFirstAlive();
+
+                if (live) {
+                    live.kill();
+                }
+                this.livesCounter--;
+
+                if (this.livesCounter == 0) {
+                    player.kill();
+                     // Use your custom function when the player dies
+                }}
+
+
+
+
+
+
+
+            player.body.velocity.x = 0;
+
+            if (cursors.left.isDown) {
+                //  Move to the left
+                player.body.velocity.x = -150;
+
+                player.animations.play('left');
+            }
+            else if (cursors.right.isDown) {
+                //  Move to the right
+                player.body.velocity.x = 150;
+
+                player.animations.play('right');
+            }
+            else {
+                //  Stand still
+                player.animations.play('stop');
+            }
+
+            if (cursors.up.isDown && cursors.right.isDown && player.body.touching.down) {
+                player.body.velocity.y = -400;
+                player.animations.stop();
+                player.frame = 0;
+            }
+            if (cursors.up.isDown && cursors.right.isDown) {
+                player.animations.stop();
+                player.frame = 0;
+            }
+            if (cursors.up.isDown && cursors.left.isDown && player.body.touching.down) {
+                player.body.velocity.y = -400;
+                player.animations.stop();
+                player.frame = 1;
+            }
+            if (cursors.up.isDown && cursors.left.isDown) {
+                player.animations.stop();
+                player.frame = 1;
+            }
+            if (cursors.up.isDown && player.body.touching.down) {
+                player.body.velocity.y = -400;
+                player.animations.stop();
+                player.frame = 0;
+            }
+
+
+
+},
 };
