@@ -41,8 +41,8 @@ var playState = {
         createLedge(0, 500, 2);
         createLedge(520, 500, 3);
         createLedge(300, 500, 1);
-
-        player = game.add.sprite(300, game.world.height - 200, 'dude');
+        player = null;
+            player = game.add.sprite(300, game.world.height - 200, 'dude');
 
 
         game.physics.arcade.enable(player);
@@ -154,6 +154,7 @@ var playState = {
 
                 if (live) {
                     live.kill();
+                    player.reset(300, game.world.height - 200)
                 }
                 this.livesCounter--;
 
