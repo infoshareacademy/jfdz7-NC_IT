@@ -16,7 +16,6 @@ var loadState = {
         game.load.spritesheet('playButton', 'assets/menu/playButton.png', 110, 110);
         game.load.spritesheet('scoreButton', 'assets/menu/highScoreButton.png', 110, 110);
         game.load.spritesheet('howToPlayButton', 'assets/menu/howToPlayButton.png', 110, 110);
-        game.load.image('cloud', 'assets/cloud-1.png');
         game.load.image('heart', 'assets/player/heartFull.png');
 
     },

@@ -4,6 +4,29 @@ var playState = {
 
         game.add.sprite(0, 0, 'bground');
 
+        ///////////////////////////////////////////////////CLOUDS
+
+        cloud = game.add.group();
+        texture1 = game.add.group();
+        texture2 = game.add.group();
+        texture3 = game.add.group();
+        clouds = [];
+        cloud = game.make.sprite(0, 0, 'cloud-2');
+        game.physics.arcade.enable(cloud);
+
+        texture1 = game.add.renderTexture(800, 700, 'texture1');
+        texture2 = game.add.renderTexture(800, 700, 'texture2');
+        texture3 = game.add.renderTexture(800, 700, 'texture3');
+
+
+
+        game.add.sprite(0, 0, texture1);
+        game.add.sprite(0, 0, texture2);
+        game.add.sprite(0, 0, texture3);
+
+        ///////////////////////////////////////////////////
+
+
 
         platforms = game.add.group();
 
@@ -32,6 +55,8 @@ var playState = {
             ledgeLeft.body.immovable = true;
         }
 
+
+
         createLedge(520, 100, 3);
         createLedge(0, 100, 4);
         createLedge(310, 200, 6);
@@ -55,6 +80,7 @@ var playState = {
         player.animations.add('right', [2, 3, 4, 5, 6, 7], 17, true);
         player.animations.add('stop', [14, 15], 3, true);
         cursors = game.input.keyboard.createCursorKeys();
+
 
         // ENEMY
 
@@ -84,6 +110,8 @@ var playState = {
 
 
         /////////////////
+
+        var cloud2 = game.add.image(680, 23, 'cloud-1');
 
         ////////////////LIFE
         this.livesCounter = 4;
@@ -127,10 +155,11 @@ var playState = {
             gem.body.bounce.y = 0.6 + Math.random() * 0.3;
         }
 
-        var cloud2 = game.add.image(680, 23, 'cloud-1');
+
 
     },
     update: function () {
+
         var hitPlatform = game.physics.arcade.collide(player, platforms);
         var gemHitPlatform = game.physics.arcade.collide(gems, platforms);
         var playerKillGem = game.physics.arcade.overlap(player, gems, killGem, null, this);
@@ -139,11 +168,58 @@ var playState = {
         game.physics.arcade.collide(player, enemies2, lostLife,null, this);
         game.physics.arcade.collide(player, enemies3, lostLife,null, this);
 
+        /////////////////////////////////////////////CLOUDS
+
+        var t = texture1;
+        var s = .1;
+        var x = 5;
+        var y = 10;
+
+        for (var i = 0; i < 3; i++) {
+
+            if (i == 1) {
+
+                s = .2;
+                t = texture2;
+                x = Math.floor(Math.random() * 500) + 300;
+                y = Math.floor(Math.random() * 100) + 90;
+
+            } else if (i == 2) {
+
+                s = .4;
+                t = texture3;
+                x = Math.floor(Math.random() * 30);
+                y = Math.floor(Math.random() * 160) + 150;
+
+            }
+
+            clouds.push( { x: x, y: y, speed: s, texture: t});
+        }
+
+        for (var i = 0; i < 3; i++) {
+
+            clouds[i].x += clouds[i].speed;
+
+            if (clouds[i].x > 800) {
+
+                clouds[i].x = -100;
+                clouds[i].y = game.world.randomY / 3;
+
+            }
+
+            if (i == 0 || i == 1 || i == 2) {
+
+                clouds[i].texture.renderXY(cloud, clouds[i].x, clouds[i].y, true);
+
+            } else {
+
+                clouds[i].texture.renderXY(cloud, clouds[i].x, clouds[i].y, false);
+
+            }
+        }
 
 
-
-
-            function killGem(player, gem) {
+        function killGem(player, gem) {
                 gem.kill();
             }
 
@@ -164,12 +240,7 @@ var playState = {
                 }}
 
 
-
-
-
-
-
-            player.body.velocity.x = 0;
+        player.body.velocity.x = 0;
 
             if (cursors.left.isDown) {
                 //  Move to the left
@@ -212,7 +283,8 @@ var playState = {
                 player.frame = 0;
             }
 
-
+        console.log(clouds);
 
 },
 };
+
