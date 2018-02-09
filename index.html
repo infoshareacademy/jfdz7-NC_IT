@@ -164,13 +164,13 @@
 
                             <button type="button" value="Send" id="send" class="btn btn-block btn-dark "
                                     data-aos="fade-up" data-aos-duration="1000" disabled data-toggle="modal"
-                                    data-target="#exampleModalCenter"><span class="fa fa-envelope"></span> Zapisz
+                                    data-target="#antispam"><span class="fa fa-envelope"></span> Zapisz
                                 się!
                             </button>
 
                         </div>
 
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                        <div class="modal fade" id="antispam" tabindex="-1" role="dialog"
                              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -192,7 +192,9 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij
                                         </button>
-                                        <button type="submit" disabled class="btn btn-primary email-submit">Wyślij</button>
+                                        <button type="submit" disabled class="btn btn-primary email-submit " id="game-btn" data-toggle="modal" data-target="#game" href="game/game.html" data-dismiss="modal">Wyślij</button>
+
+                                        <!--<button type="submit" disabled class="btn btn-primary email-submit ">Wyślij</button>-->
                                     </div>
                                 </div>
                             </div>
@@ -203,12 +205,25 @@
                 </div>
             </form>
 
-
             <p>Obiecujemy wysłać tylko jedną wiadomość z informacją o premierze naszej aplikacji, a Twoje dane będą u
                 nas bezpieczne.</p>
         </div>
     </div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="game-modal" aria-hidden="true" id="game">
+        <div class="modal-dialog d-none d-lg-block" id="game-dialog">
+            <div class="modal-content" id="game-modal">
+            </div>
+        </div>
+        <div class="modal-dialog d-none d-md-block">
+            <div class="modal-body">
+                <p>Otwierając stronę na komputerze zagrasz w grę Łowcy okazji!</p>
+            </div>
+        </div>
+    </div>
+
 </section>
+
 
 <!-- FZ7NI-7 end of sign-in section -->
 
@@ -328,5 +343,7 @@
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js"></script>
+
+
 </body>
 </html>
