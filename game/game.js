@@ -5,5 +5,6 @@ game.state.add('load', loadState);
 game.state.add('menu', menuState);
 game.state.add('highScore', highScoreState);
 game.state.add('howToPlay', howToPlayState);
+game.state.add('win', win);
 
 game.state.start('load');
