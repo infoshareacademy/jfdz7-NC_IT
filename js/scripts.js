@@ -7,6 +7,9 @@ $(document).ready(function() {
     var $logo = $('.logo');
     var $email = $('#email');
     var $formSubmitButton = $('#send');
+    const $emailSubmit = $('.email-submit');
+    const $pinInput = $('.pin-input');
+    const pin = Math.round(Math.random() * 10000);
 
     function scrollToSection(event) {
         event.preventDefault();
@@ -68,6 +71,43 @@ $(document).ready(function() {
 
     $email.on('input', validateSubmitButton);
 
+    $('<span class="is-human-pin"></span>').appendTo('.is-human');
+    $('.is-human-pin').text(`${pin}`);
+
+    function isPinInvalid() {
+        let input = $pinInput.val();
+        return parseInt(input) !== pin;
+    }
+    function validateSubmitBtn() {
+        // isPinInvalid ? $emailSubmit.attr('disabled', '') : $emailSubmit.removeAttr('disabled') ;
+        $emailSubmit.prop('disabled', isPinInvalid)
+    }
+    $pinInput.on('keyup', validateSubmitBtn);
+
+    $('#game-btn').on('click', function(e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        $('#game-modal').html('<iframe width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" src="'+url+'"></iframe>');
+    });
+
+    $('#game').on('show.bs.modal', function () {
+
+        $(this).find('.modal-dialog').css({
+            'max-width': '100%',
+            width:'820px',
+            height:'720px',
+            'padding':'0',
+            'top': '-4%'
+        });
+        $(this).find('.modal-content').css({
+            width:'820px',
+            height:'720px',
+            'border-radius':'0',
+            'padding':'0',
+            'background': '#000000'
+        });
+
+    })
 
 
 });

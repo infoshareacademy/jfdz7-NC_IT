@@ -312,6 +312,9 @@ header {
     top: 30%;
     transform: translate(0, -50%)
 }
+.modal-content {
+    color: black;
+}
 
 /* FZ7NI-7 end of sign-in section*/
 
