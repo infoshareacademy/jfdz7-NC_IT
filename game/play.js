@@ -137,8 +137,10 @@ var playState = {
         cloud1.scale.x *= -1;
 
         gems = game.add.group();
+        mushrooms = game.add.group();
 
         gems.enableBody = true;
+        mushrooms.enableBody = true;
 
 
         for (var i = 0; i < 10; i++) {
@@ -153,6 +155,17 @@ var playState = {
             gem4.body.gravity.y = 15;
 
             gem.body.bounce.y = 0.6 + Math.random() * 0.3;
+        }
+
+        for (var k = 0; k < 5; k++) {
+            var mushroom = mushrooms.create(k * 200, 100, 'mushroom');
+            var mushroom2 = mushrooms.create(k * 220, 250, 'mushroom');
+
+            mushroom.body.gravity.y = 120;
+            mushroom2.body.gravity.y = 150;
+
+            mushroom.body.bounce.y = 0.2 + Math.random() * 0.2;
+            mushroom2.body.bounce.y = 0.2 + Math.random() * 0.2;
         }
 
         score = 0;
@@ -170,7 +183,9 @@ var playState = {
 
         var hitPlatform = game.physics.arcade.collide(player, platforms);
         var gemHitPlatform = game.physics.arcade.collide(gems, platforms);
+        var mushroomHitPlatform = game.physics.arcade.collide(mushrooms, platforms);
         var playerKillGem = game.physics.arcade.overlap(player, gems, killGem, null, this);
+        var playerKillMushroom = game.physics.arcade.overlap(player, mushrooms, killMushroom, null, this);
         game.physics.arcade.collide(player, this.enemies, lostLife,null, this);
         game.physics.arcade.collide(player, enemies1, lostLife,null, this);
         game.physics.arcade.collide(player, enemies2, lostLife,null, this);
@@ -237,6 +252,17 @@ var playState = {
                     game.state.start('win');
                 }
             }
+
+        function killMushroom(player, mushroom) {
+            mushroom.kill();
+            getHit.play();
+            score -= 6;
+            scoreText.text = 'Wynik: ' + score;
+            if (score == 220) {
+                player.kill();
+                game.state.start('win');
+            }
+        }
 
             function lostLife () {
                 live = this.lives.getFirstAlive();
