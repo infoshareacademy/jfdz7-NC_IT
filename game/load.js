@@ -17,6 +17,10 @@ var loadState = {
         game.load.spritesheet('scoreButton', 'assets/menu/highScoreButton.png', 110, 110);
         game.load.spritesheet('howToPlayButton', 'assets/menu/howToPlayButton.png', 110, 110);
         game.load.image('heart', 'assets/player/heartFull.png');
+        game.load.audio('getCoin', 'assets/audio/sfx_coin_double1.wav');
+        game.load.audio('jump', 'assets/audio/sfx_movement_jump13.wav');
+        game.load.audio('getHit', 'assets/audio/sfx_sounds_interaction17.wav');
+        game.load.audio('die', 'assets/audio/sfx_alarm_loop5.wav');
 
     },
 

@@ -158,7 +158,13 @@ var playState = {
         score = 0;
         scoreText = null;
         scoreText = game.add.text(300, 600, 'Wynik: 0', { fontSize: '32px', fill: '#000' });
+        ////////AUDIO
+        getCoin = game.add.audio('getCoin');
+        jump = game.add.audio('jump');
+        getHit = game.add.audio('getHit');
+        die = game.add.audio('die');
 
+        /////////
     },
     update: function () {
 
@@ -223,6 +229,7 @@ var playState = {
 
         function killGem(player, gem) {
                 gem.kill();
+                getCoin.play();
                 score += 10;
                 scoreText.text = 'Wynik: ' + score;
                 if (score == 220) {
@@ -236,12 +243,14 @@ var playState = {
 
                 if (live) {
                     live.kill();
+                    getHit.play();
                     player.reset(300, game.world.height - 200)
                 }
                 this.livesCounter--;
 
                 if (this.livesCounter == 0) {
                     player.kill();
+                    die.play();
                     game.state.start('win');
                      // Use your custom function when the player dies
                 }}
@@ -288,6 +297,7 @@ var playState = {
                 player.body.velocity.y = -400;
                 player.animations.stop();
                 player.frame = 0;
+                jump.play();
             }
 
         console.log(clouds);
