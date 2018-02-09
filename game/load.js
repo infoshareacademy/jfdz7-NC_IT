@@ -23,6 +23,9 @@ var loadState = {
     create: function() {
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.state.start('menu');
+        score = 0;
+        highscore = localStorage.highScore;
+
     }
 
 };

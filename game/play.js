@@ -87,7 +87,7 @@ var playState = {
             this.enemies = game.add.sprite(700, 150, 'enemy', 1);
             this.enemies.smoothed = false;
             this.enemies.animations.add('center', [6, 5, 4, 3, 2, 1, 7, 9, 10, 11, 12], 15, true);
-            this.enemies.movementloop = game.add.tween(this.enemies).to({x: this.enemies.x - 450}, 2200, "Linear", true, 0, -1, true, this.enemies.animations.play('center'));
+            this.enemies.movementloop = game.add.tween(this.enemies).to({x: this.enemies.x - 450}, 5000, "Linear", true, 0, -1, true, this.enemies.animations.play('center'));
             game.physics.enable(this.enemies, Phaser.Physics.ARCADE);
 
             enemies1 = game.add.sprite(190, 350, 'enemy', 1);
@@ -118,7 +118,7 @@ var playState = {
         this.lives = null;
         this.lives = this.add.group();
         var x = 150; // use your values
-        var y = 650;
+        var y = 620;
 
         for (var i = 0; i < 3; i++) {
             var life = this.lives.create(
@@ -155,7 +155,9 @@ var playState = {
             gem.body.bounce.y = 0.6 + Math.random() * 0.3;
         }
 
-
+        score = 0;
+        scoreText = null;
+        scoreText = game.add.text(300, 600, 'Wynik: 0', { fontSize: '32px', fill: '#000' });
 
     },
     update: function () {
@@ -221,9 +223,13 @@ var playState = {
 
         function killGem(player, gem) {
                 gem.kill();
+                score += 10;
+                scoreText.text = 'Wynik: ' + score;
+                if (score == 220) {
+                    player.kill();
+                    game.state.start('win');
+                }
             }
-
-
 
             function lostLife () {
                 live = this.lives.getFirstAlive();
@@ -236,6 +242,7 @@ var playState = {
 
                 if (this.livesCounter == 0) {
                     player.kill();
+                    game.state.start('win');
                      // Use your custom function when the player dies
                 }}
 
