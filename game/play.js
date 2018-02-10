@@ -325,9 +325,6 @@ var playState = {
                 player.frame = 0;
                 jump.play();
             }
-
-        console.log(clouds);
-
 },
 };
 

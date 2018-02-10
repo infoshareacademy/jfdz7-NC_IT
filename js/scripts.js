@@ -91,7 +91,6 @@ $(document).ready(function() {
     });
 
     $('#game').on('show.bs.modal', function () {
-
         $(this).find('.modal-dialog').css({
             'max-width': '100%',
             width:'820px',
