@@ -138,6 +138,7 @@ var playState = {
 
         gems = game.add.group();
         mushrooms = game.add.group();
+        mushrooms.anchor.setTo(0.5,0.5);
 
         gems.enableBody = true;
         mushrooms.enableBody = true;
