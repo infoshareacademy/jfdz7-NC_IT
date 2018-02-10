@@ -87,7 +87,7 @@ var playState = {
             this.enemies = game.add.sprite(700, 150, 'enemy', 1);
             this.enemies.smoothed = false;
             this.enemies.animations.add('center', [6, 5, 4, 3, 2, 1, 7, 9, 10, 11, 12], 15, true);
-            this.enemies.movementloop = game.add.tween(this.enemies).to({x: this.enemies.x - 450}, 5000, "Linear", true, 0, -1, true, this.enemies.animations.play('center'));
+            this.enemies.movementloop = game.add.tween(this.enemies).to({x: this.enemies.x - 450}, 7000, "Linear", true, 0, -1, true, this.enemies.animations.play('center'));
             game.physics.enable(this.enemies, Phaser.Physics.ARCADE);
 
             enemies1 = game.add.sprite(190, 350, 'enemy', 1);
@@ -99,7 +99,7 @@ var playState = {
             enemies2 = game.add.sprite(0, 50, 'enemy', 1);
             enemies2.smoothed = false;
             enemies2.animations.add('center', [6, 5, 4, 3, 2, 1, 7, 9, 10, 11, 12], 15, true);
-            enemies2.movementloop = game.add.tween(enemies2).to({x: enemies2.x + 700}, 6000, "Linear", true, 0, -1, true, enemies2.animations.play('center'));
+            enemies2.movementloop = game.add.tween(enemies2).to({x: enemies2.x + 700}, 8000, "Linear", true, 0, -1, true, enemies2.animations.play('center'));
             game.physics.enable(enemies2, Phaser.Physics.ARCADE);
 
             enemies3 = game.add.sprite(0, 450, 'enemy', 1);
@@ -160,7 +160,7 @@ var playState = {
         var cloud2 = game.add.image(680, 23, 'cloud-1');
 
         for (var k = 0; k < 5; k++) {
-            var mushroom = mushrooms.create(k * 200, 100, 'mushroom');
+            var mushroom = mushrooms.create(k * 200, 50, 'mushroom');
             var mushroom2 = mushrooms.create(k * 220, 250, 'mushroom');
 
             mushroom.body.gravity.y = 120;
