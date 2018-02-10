@@ -111,7 +111,7 @@ var playState = {
 
         /////////////////
 
-        var cloud2 = game.add.image(680, 23, 'cloud-1');
+
 
         ////////////////LIFE
         this.livesCounter = 4;
@@ -156,6 +156,8 @@ var playState = {
 
             gem.body.bounce.y = 0.6 + Math.random() * 0.3;
         }
+
+        var cloud2 = game.add.image(680, 23, 'cloud-1');
 
         for (var k = 0; k < 5; k++) {
             var mushroom = mushrooms.create(k * 200, 100, 'mushroom');
