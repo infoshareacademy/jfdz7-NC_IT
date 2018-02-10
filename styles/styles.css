@@ -250,6 +250,15 @@ header {
 
 /* FZ7NI-8 navbar*/
 
+.logo {
+    height: 2em;
+    transition: 200ms linear;
+}
+
+.logo-sm {
+    height: 1.7em;
+}
+
 .navbar .navbar-brand {
     margin-left: 0.7em;
 }
@@ -293,6 +302,18 @@ header {
 
 #sign-in .lead {
     font-family: sans-serif;
+}
+
+#send:disabled {
+    opacity: .5;
+}
+
+.modal-dialog {
+    top: 30%;
+    transform: translate(0, -50%)
+}
+.modal-content {
+    color: black;
 }
 
 /* FZ7NI-7 end of sign-in section*/
