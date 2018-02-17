@@ -21,11 +21,8 @@ var win = {
     },
     update: function() {
         scoreText.text = 'Koniec gry ! :D Twój wynik: ' + score;
-        if(localStorage.highScore === null){
-
-            localStorage.highScore = score;
-        }
-        else if(score > localStorage.highScore){
+        localStorage.highScore = score;
+        if(score > localStorage.highScore){
 
             localStorage.highScore = score;
         }

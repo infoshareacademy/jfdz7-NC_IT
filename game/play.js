@@ -260,6 +260,7 @@ var playState = {
             getHit.play();
             score -= 6;
             scoreText.text = 'Wynik: ' + score;
+
             if (score == 220) {
                 player.kill();
                 game.state.start('win');
@@ -282,6 +283,7 @@ var playState = {
                     game.state.start('win');
                      // Use your custom function when the player dies
                 }}
+
 
 
         player.body.velocity.x = 0;
@@ -327,6 +329,7 @@ var playState = {
                 player.frame = 0;
                 jump.play();
             }
+
 },
 };
 
