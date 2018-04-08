@@ -295,7 +295,7 @@ header {
 #sign-in .content {
     margin: 100px 0;
     height: auto;
-    padding: 25px;
+    padding: 25px 60px;
     background: rgba(44, 62, 80, 0.7);
     color: #ecf0f1;
 }
